@@ -15,8 +15,7 @@
             <form>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Entrez email">
-                    <small id="emailHelp" class="form-text text-muted"></small>
+                    <input type="email" class="form-control" id="email" placeholder="Entrez email">
                 </div>
                 <div class="form-group">
                     <label for="Password">Password</label>

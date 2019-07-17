@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <?php include 'includes/css.php'; ?>
-    <title>Connexion</title>
+    <title>Inscription</title>
 </head>
 
 <body>

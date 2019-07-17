@@ -9,8 +9,8 @@
     <main>
         <div class="d-flex flex-column d-flex justify-content-center align-items-center vh-100">
             <div class="fixed-top justify-content-end row mr-1">
-                <button type="button" class="btn btn-danger">Connexion</button>
-                <button type="button" class="btn btn-danger ">Inscription</button>
+                <a href="formulaire/connexion.php" ><button type="button" class="btn btn-danger">Connexion</button></a>
+                <a href="fomulaire/inscription.php"<button type="button" class="btn btn-danger ">Inscription</button></a>
             </div>
 
             <h1 class="text-danger">PinballCrous</h1>
