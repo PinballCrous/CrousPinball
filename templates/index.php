@@ -6,12 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <main class="vh-100 d-flex flex-column d-flex justify-content-center align-items-center">
-        <h1 class="text-danger">PinballCrous</h1>
-        <p>Bienvenue sur le FlipperCrous ici vous trouverez un jeu ludique pour mieux connaitre le crous</p>
-        <div class="d-inline-block">
+    <main>
+        <div class="d-flex flex-column d-flex justify-content-center align-items-center vh-100">
+            <div class="fixed-top justify-content-end row mr-1">
+                <button type="button" class="btn btn-danger">Connexion</button>
+                <button type="button" class="btn btn-danger ">Inscription</button>
+            </div>
+
+            <h1 class="text-danger">PinballCrous</h1>
+            <p>Bienvenue sur le FlipperCrous ici vous trouverez un jeu ludique pour mieux connaitre le crous</p>
+            <div class="d-inline-block">
             <button type="button" class="btn btn-danger">Jouer une partie simple</button>
             <button type="button" class="btn btn-danger">Jouer une partie à thème</button>
+        </div>
         </div>
     </main>
 
