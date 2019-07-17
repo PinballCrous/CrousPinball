@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <?php include 'includes/css.php'; ?>
     <title>Document</title>
 </head>
 <body>
-    <h1>Coucou je suis vide!</h1>
+    <main>
+        <h1 class="text-default">PinballCrous</h1>
+    </main>
+
+
+
+    <?php include 'includes/js.php'; ?>
 </body>
 </html>
