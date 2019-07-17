@@ -18,6 +18,6 @@ class objettouchable{
         this.taille = taille;
     }
     setCouleur(couleur){
-        this.couleur;
+        this.couleur = couleur;
     }
 }
