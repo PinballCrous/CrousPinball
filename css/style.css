@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css?family=Hind');
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	color: #ffffff;
+	background-color: #E8E8E8;
+	font-family: 'Hind', sans-serif;
+	text-transform: uppercase;
+}
+
+.button{
+	color: white;
+	background: #A80606;
+	font-size: 50px;
+	padding: 10px;
+	margin: 10px;
+}
+
+.container {
+	position: relative;
+	line-height: 0;
+}
+
+.score {
+	position: absolute;
+	top: 10px;
+	line-height: 1;
+	color: #A80606;
+}
+
+.level{
+	/* position: absolute; */
+	/* top: 5px; */
+	line-height: 1;
+	color: black;
+	top: 0.313em;
+	position: absolute;
+}
+
+.level span{
+	font-size: 3.25rem;
+}
+
+.score span {
+	font-size: 3.25rem;
+}
+
+.current-score {
+	left: 10px;
+}
+
+.high-score {
+	text-align: right;
+	right: 10px;
+}
+
+.trigger {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	bottom: 10px;
+  border: 0;
+	border-radius: 50%;
+  color: inherit;
+	background-color: #E30000;
+	text-align: center;
+	line-height: 80px;
+	font-size: 1.25rem;
+  text-transform: inherit;
+	cursor: pointer;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+  outline: none;
+
+}
+
+.left-trigger {
+	left: 10px;
+}
+
+.right-trigger {
+	right: 60px;
+}
+
+canvas {
+	overflow: hidden;
+	border-radius: 5px;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.75);
+	background-image: url('../img/background-flipper.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.letter {
+	color: #EDEDED;
+	text-shadow: 2px 2px #C2C2C2;
+	font-size: 2.5em;
+	position: absolute;
+	top: 145px;
+}
+
+#c{
+	left: 113px;
+}
+
+#r{
+	left: 165px;
+}
+
+#o{
+	left: 211px;
+}
+
+#u{
+	left: 262px;
+}
+
+#s{
+	left: 315px;
+}
+
+#levelDisplay {
+	color: #A80606;
+	position: absolute;
+	top: 30%;
+	left: 5vw;
+	font-size: 5em;
+	transform: translate(0%, -50%);
+}
+
+#monthDisplay {
+	color: #A80606;
+	position: absolute;
+	top: 70%;
+	left: 5vw;
+	font-size: 5em;
+	transform: translate(0%, -50%);
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.nostyle{
+	text-decoration: none;
+	color: white;
+}
+
+.definition {
+	visibility: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	font-size: 3em;
+	color: black;
+}
+
+.btn_menu{
+	bottom: 5%;
+	right: 30%;
+	transform: translate(-50%, -100%);
+	position: absolute;
+	border: none;
+	background-color: #A80606;
+	height: 3vh;
+	border-radius: 5px;
+}
+
+.btn_menu:hover{
+	box-shadow: 5px 5px 5px #A50303;
+}
+
+.btn_menu a{
+	color: white;
+	text-decoration: none;
+	font-size: 1.5em;
+}
+
+#centr,#regio,#oeuvr,#unive,#scola {
+	font-weight: bold;
+	color: #FF4900;
+}
+
+/* responsive scaling, because pinball tables are tall */
+@media (min-height: 0px) {
+	.container { -webkit-transform: scale(0.25); transform: scale(0.25); }
+}
+@media (min-height: 400px) {
+	.container { -webkit-transform: scale(0.5); transform: scale(0.5); }
+}
+@media (min-height: 600px) {
+	.container { -webkit-transform: scale(0.75); transform: scale(0.75); }
+}
+@media (min-height: 800px) {
+	.container { -webkit-transform: scale(1); transform: scale(1); }
+}

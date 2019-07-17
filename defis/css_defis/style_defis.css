@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Hind');
+body{
+	padding: 0;
+	background-color: #E8E8E8;
+	font-family: 'hind';
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+main{
+	width: 75%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+h1{
+	text-align: center;
+	color: #A80606;
+}
+
+.container{
+	width: 10vw;
+	padding: 0;
+	background-color:  #A80606;
+	border-radius: 15px;
+	margin: 3em;
+	margin-top: 15em;
+}
+
+.container:hover{
+	background-color: #B72C2C;
+	border-radius: 15px;
+	background-color: #B72C2C;
+	border-radius: 15px;
+	box-shadow: 2px 2px 2px 2px #A80606;
+}
+
+.contenu:hover{
+	
+}
+
+.container p{
+	color: white;
+	font-size: 1.5em;
+	margin: 0;
+}
+
+
+
+.contenu{
+	text-align: center;
+}
+.fluid{
+	width: 10vw;
+	padding: 0;
+	height: 11vh;
+}
+
+.btn{
+	width: 100%;
+	border-radius:0px 0px 15px 15px;
+	background-color: white;
+	box-shadow: none;
+	border: none;
+	font-size: 1.5em;
+}
+
+
+
+a{
+	text-decoration: none;
+	color: #A80606;
+}
+
+.back{
+	position: absolute;
+	top: 70%;
+	border: none;
+	background-color: #A80606;
+	border-radius: 10px;
+}
+
+.back:hover{
+	box-shadow: 2px 2px 2px #A80606;
+}
+
+.btnback{
+	color: white;
+	font-size: 1.5em;
+}
