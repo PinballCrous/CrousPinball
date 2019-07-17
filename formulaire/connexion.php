@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <?php include 'includes/css.php'; ?>
+    <?php include '../templates/includes/css.php'; ?>
     <title>Connexion</title>
 </head>
 
