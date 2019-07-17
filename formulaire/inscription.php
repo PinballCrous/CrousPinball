@@ -51,7 +51,7 @@
 
 
 
-    <?php include 'includes/js.php'; ?>
+    <?php include '../templates/includes/js.php'; ?>
 </body>
 
 </html>

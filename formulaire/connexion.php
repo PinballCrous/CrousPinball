@@ -21,14 +21,14 @@
                     <label for="Password">Password</label>
                     <input type="password" class="form-control" id="password" placeholder="Mot de passe">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-success">Submit</button>
             </form>
         </div>
     </main>
 
 
 
-    <?php include 'includes/js.php'; ?>
+    <?php include '../templates/includes/js.php'; ?>
 </body>
 
 </html>
