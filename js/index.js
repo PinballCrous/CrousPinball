@@ -308,7 +308,6 @@
 				$('#cent').removeClass("hidden");
 				setTimeout(updateScore(currentScore + 10), 500);
 				if (shownc == false){
-					letter.play();
 					$('#centr').css("visibility", "visible");
 					shownc = true;
 					setTimeout(function(){
@@ -322,7 +321,6 @@
 				$('#regi').removeClass("hidden");
 				setTimeout(updateScore(currentScore + 10), 500);
 				if (shownr == false){
-					letter.play();
 					$('#regio').css("visibility", "visible");
 					shownr = true;
 					setTimeout(function(){
@@ -336,7 +334,6 @@
 				$('#oeuv').removeClass("hidden");
 				setTimeout(updateScore(currentScore + 10), 500);
 				if (showno == false){
-					letter.play();
 					$('#oeuvr').css("visibility", "visible");
 					showno = true;
 					setTimeout(function(){
@@ -350,7 +347,6 @@
 				$('#univ').removeClass("hidden");
 				setTimeout(updateScore(currentScore + 10), 500);
 				if (shownu == false){
-					letter.play();
 					$('#unive').css("visibility", "visible");
 					shownu = true;
 					setTimeout(function(){
@@ -364,7 +360,6 @@
 				$('#scol').removeClass("hidden");
 				setTimeout(updateScore(currentScore + 10), 500);
 				if (showns == false){
-					letter.play();
 					$('#scola').css("visibility", "visible");
 					showns = true;
 					setTimeout(function(){
@@ -373,9 +368,6 @@
 				}
 			}
 
-			// var theme = document.querySelector('#theme');
-			// theme.play();
-			// // Musique de theme ligne 271!
 
 
 			// bumpers can quickly multiply velocity, so keep that in check
@@ -401,15 +393,13 @@
 			}
 		}));
 
-		let soundPaddle = document.querySelector('#PADDLE');
+		
 		// keyboard paddle events
 		$('body').on('keydown', function(e) {
 			if (e.which === 37) { // left arrow key
 				isLeftPaddleUp = true;
-				soundPaddle.play();
 			} else if (e.which === 39) { // right arrow key
 				isRightPaddleUp = true;
-				soundPaddle.play();
 			}
 		});
 		$('body').on('keyup', function(e) {
@@ -424,9 +414,6 @@
 			if (e.which === 32) { // space key
 				if (isReset) {
 					launchPinball();
-
-					let launch = document.querySelector('#launch');
-					launch.play();
 				}
 			}
 		});
@@ -436,7 +423,6 @@
 		$('.left-trigger')
 			.on('mousedown touchstart', function(e) {
 				isLeftPaddleUp = true;
-				soundPaddle.play();
 			})
 			.on('mouseup touchend', function(e) {
 				isLeftPaddleUp = false;
@@ -445,7 +431,6 @@
 		$('.right-trigger')
 		.on('mousedown touchstart', function(e) {
 				isRightPaddleUp = true;
-				soundPaddle.play();
 			})
 			.on('mouseup touchend', function(e) {
 				isRightPaddleUp = false;
@@ -471,8 +456,6 @@
 
 	function pingBumper(bumper) {
 		updateScore(currentScore + 10);
-		var blaster = document.querySelector('#blaster');
-		blaster.play();
 
 		// flash color
 		bumper.render.fillStyle = COLOR.BUMPER_LIT;
