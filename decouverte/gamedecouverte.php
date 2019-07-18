@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Menu defis</title>
+    <title>Pinball CROUS</title>
 </head>
 
 <body>
@@ -91,7 +91,7 @@
         </div>
 
         <div class="fixed-bottom justify-content-end row mr-1">
-            <a href="../templates/index.php"><button type="button" class="btn btn-danger">menu</button></a>
+            <a href="../templates/index.php"><button type="button" class="btn btn-danger">Menu</button></a>
         </div>
     </main>
 
