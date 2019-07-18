@@ -58,12 +58,9 @@
                     <p class="definition" id="unive">Universitaires</p>
                     <p class="definition" id="scola">Scolaires</p>
                 </div>
-<<<<<<< HEAD
-=======
                 <div>
                     <button class="btn_menu"><a href="../defis/IndexDefis.php">Menu</a></button>
                 </div>
->>>>>>> betaCROUS
 
                 <audio src="musique/blaster.mp3" id="blaster"></audio>
                 <audio id="theme" src="musique/theme.mp3" loop autoplay></audio>
@@ -87,12 +84,6 @@
 
             </div>
 
-<<<<<<< HEAD
-=======
-        <div class="fixed-bottom justify-content-end row mr-1">
-            <a href="../templates/index.php"><button type="button" class="btn btn-danger">Menu</button></a>
-        </div>
->>>>>>> betaCROUS
     </main>
 
 
