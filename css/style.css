@@ -5,198 +5,198 @@
 }
 
 html, body {
-	height: 100% !important; 
-	overflow: hidden !important;
+	height: 100%;
+	overflow: hidden;
 }
 
 body {
-	display: flex !important;
-	justify-content: center !important;
-	align-items: center !important;
-	margin: 0 !important;
-	color: #ffffff !important;
-	background-color: #E8E8E8 !important;
-	font-family: 'Hind', sans-serif !important;
-	text-transform: uppercase !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	color: #ffffff;
+	background-color: #E8E8E8;
+	font-family: 'Hind', sans-serif;
+	text-transform: uppercase;
 }
 
 .button{
-	color: white !important;
-	background: #A80606 !important;
-	font-size: 50px !important;
-	padding: 10px !important;
-	margin: 10px !important;
+	color: white;
+	background: #A80606;
+	font-size: 50px;
+	padding: 10px;
+	margin: 10px;
 }
 
 .container {
-	position: relative !important;
-    line-height: 0 !important;
+	position: relative;
+	line-height: 0;
 }
 
 .score {
-	position: absolute !important;
-	top: 10px !important;
-	line-height: 1 !important;
-	color: #A80606 !important;
+	position: absolute;
+	top: 10px;
+	line-height: 1;
+	color: #A80606;
 }
 
 .level{
 	/* position: absolute; */
 	/* top: 5px; */
-	line-height: 1 !important;
-	color: black !important;
-	top: 0.313em !important;
-	position: absolute !important;
+	line-height: 1;
+	color: black;
+	top: 0.313em;
+	position: absolute;
 }
 
 .level span{
-	font-size: 3.25rem !important;
+	font-size: 3.25rem;
 }
 
 .score span {
-	font-size: 3.25rem !important;
+	font-size: 3.25rem;
 }
 
 .current-score {
-	left: 10px !important;
+	left: 10px;
 }
 
 .high-score {
-	text-align: right !important;
-	right: 10px !important;
+	text-align: right;
+	right: 10px;
 }
 
 .trigger {
-  -webkit-appearance: none !important;
-     -moz-appearance: none !important;
-          appearance: none !important;
-	position: absolute !important;
-	width: 80px !important;
-	height: 80px !important;
-	bottom: 10px !important;
-  border: 0 !important;
-	border-radius: 50% !important;
-  color: inherit !important;
-	background-color: #E30000 !important;
-	text-align: center !important;
-	line-height: 80px !important;
-	font-size: 1.25rem !important;
-  text-transform: inherit !important;
-	cursor: pointer !important;
-	-webkit-user-select: none !important;
-	   -moz-user-select: none !important;
-	    -ms-user-select: none !important;
-	        user-select: none !important;
-  outline: none !important;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	bottom: 10px;
+  border: 0;
+	border-radius: 50%;
+  color: inherit;
+	background-color: #E30000;
+	text-align: center;
+	line-height: 80px;
+	font-size: 1.25rem;
+  text-transform: inherit;
+	cursor: pointer;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+  outline: none;
 
 }
 
 .left-trigger {
-	left: 10px !important;
+	left: 10px;
 }
 
 .right-trigger {
-	right: 60px !important;
+	right: 60px;
 }
 
 canvas {
-	overflow: hidden !important;
-	border-radius: 5px !important;
-	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.75) !important;
-	background-image: url('../img/background-flipper.png') !important;
-	background-size: cover !important;
-	background-repeat: no-repeat !important;
+	overflow: hidden;
+	border-radius: 5px;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.75);
+	background-image: url('../img/background-flipper.png');
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .letter {
-	color: #EDEDED !important;
-	text-shadow: 2px 2px #C2C2C2 !important;
-	font-size: 2.5em !important;
-	position: absolute !important;
-	top: 145px !important;
+	color: #EDEDED;
+	text-shadow: 2px 2px #C2C2C2;
+	font-size: 2.5em;
+	position: absolute;
+	top: 145px;
 }
 
 #c{
-	left: 113px !important;
+	left: 113px;
 }
 
 #r{
-	left: 165px !important;
+	left: 165px;
 }
 
 #o{
-	left: 211px !important;
+	left: 211px;
 }
 
 #u{
-	left: 262px !important;
+	left: 262px;
 }
 
 #s{
-	left: 315px !important;
+	left: 315px;
 }
 
 #levelDisplay {
-	color: #A80606 !important;
-	position: absolute !important;
-	top: 30% !important;
-	left: 5vw !important;
-	font-size: 5em !important;
-	transform: translate(0%, -50%) !important;
+	color: #A80606;
+	position: absolute;
+	top: 30%;
+	left: 5vw;
+	font-size: 5em;
+	transform: translate(0%, -50%);
 }
 
 #monthDisplay {
-	color: #A80606 !important;
-	position: absolute !important;
-	top: 70% !important;
-	left: 5vw !important;
-	font-size: 5em !important;
-	transform: translate(0%, -50%) !important;
+	color: #A80606;
+	position: absolute;
+	top: 70%;
+	left: 5vw;
+	font-size: 5em;
+	transform: translate(0%, -50%);
 }
 
 .hidden {
-	visibility: hidden !important;
+	visibility: hidden;
 }
 
 .nostyle{
-	text-decoration: none !important;
-	color: white !important;
+	text-decoration: none;
+	color: white;
 }
 
 .definition {
-	visibility: hidden !important;
-	position: absolute !important;
-	top: 50% !important;
-	left: 50% !important;
-	transform: translate(-50%, -100%) !important;
-	font-size: 3em !important;
-	color: black !important;
+	visibility: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	font-size: 3em;
+	color: black;
 }
 
 .btn_menu{
-	bottom: 5% !important;
-	right: 30% !important;
-	transform: translate(-50%, -100%) !important;
-	position: absolute !important;
-	border: none !important;
-	background-color: #A80606 !important;
-	height: 3vh !important;
-	border-radius: 5px !important;
+	bottom: 5%;
+	right: 30%;
+	transform: translate(-50%, -100%);
+	position: absolute;
+	border: none;
+	background-color: #A80606;
+	height: 3vh;
+	border-radius: 5px;
 }
 
 .btn_menu:hover{
-	box-shadow: 5px 5px 5px #A50303 !important;
+	box-shadow: 5px 5px 5px #A50303;
 }
 
 .btn_menu a{
-	color: white !important;
-	text-decoration: none !important;
-	font-size: 1.5em !important;
+	color: white;
+	text-decoration: none;
+	font-size: 1.5em;
 }
 
 #centr,#regio,#oeuvr,#unive,#scola {
-	font-weight: bold !important;
-	color: #FF4900 !important;
+	font-weight: bold;
+	color: #FF4900;
 }
 
 /* responsive scaling, because pinball tables are tall */
