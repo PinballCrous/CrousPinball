@@ -28,17 +28,17 @@ session_start();
                 </div>
                 <button type="submit" class="btn btn-success">Submit</button>
             </form>
-        </div>
-        <div class="fixed-bottom justify-content-end row mr-1">
-                <a href="../templates/index.php" ><button type="button" class="btn btn-danger">Menu</button></a>
-        </div>
-        <div class="row">
-            <div class="col-8 col-lg-12 pl-5 mx-auto text-right red-text">
+            <div class="row">
+            <div class="col-8 mx-auto text-right red-text">
                <b><?php if(isset($_SESSION['erreur'])){?>
                   <i class="fas fa-exclamation-circle"></i> <?php echo $_SESSION['erreur'];}?>
                </b>
             </div>
          </div>
+        </div>
+        <div class="fixed-bottom justify-content-end row mr-1">
+                <a href="../templates/index.php" ><button type="button" class="btn btn-danger">Menu</button></a>
+        </div>
     </main>
 
 
