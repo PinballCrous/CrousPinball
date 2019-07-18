@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Hind');
 
+
 *, *::before, *::after {
 	box-sizing: border-box;
 }
@@ -189,10 +190,17 @@ canvas {
     white-space: normal;
     word-wrap: break-word;
     display: flex-end;
+    font-family: sans-serif;
+    border-color: #dc3545;
+    line-height: 1.5;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    font-weight: 400;
 }
 
 .btn_menu:hover{
-	box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.22), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
 }
 
 .prebtn{
