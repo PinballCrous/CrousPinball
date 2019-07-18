@@ -3,17 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- <?php include '../templates/includes/css.php' ?> -->
     <link rel="stylesheet" href="../css/style.css">
     <title>Menu defis</title>
 </head>
 
 <body>
     <main>
-        <div class="d-flex flex-column d-flex justify-content-center align-items-center vh-100">
-            <div class="fixed-top justify-content-end row mr-1">
-                <a href="../formulaire/connexion.php"><button type="button" class="btn btn-danger">Connexion</button></a>
-                <a href="../formulaire/inscription.php"><button type="button" class="btn btn-danger ">Inscription</button></a>
-            </div>
 
             <div onload="chronoStart()">
 
@@ -62,9 +58,6 @@
                     <p class="definition" id="unive">Universitaires</p>
                     <p class="definition" id="scola">Scolaires</p>
                 </div>
-                <div>
-                    <button class="btn_menu"><a href="menu.html">Menu</a></button>
-                </div>
 
                 <audio src="musique/blaster.mp3" id="blaster"></audio>
                 <audio id="theme" src="musique/theme.mp3" loop autoplay></audio>
@@ -87,12 +80,7 @@
 
 
             </div>
-        </div>
-        </div>
 
-        <div class="fixed-bottom justify-content-end row mr-1">
-            <a href="../templates/index.php"><button type="button" class="btn btn-danger">menu</button></a>
-        </div>
     </main>
 
 
