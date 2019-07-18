@@ -131,15 +131,15 @@
 
 			// slingshots (left, right)
 			wall(120, 510, 20, 120, COLOR.INNER),
-			wall(330, 510, 20, 120, COLOR.INNER),
+			wall(345, 510, 20, 120, COLOR.INNER),
 
 			// out lane walls (left, right)
 			wall(59, 529, 20, 160, COLOR.INNER),
-			wall(391, 529, 20, 160, COLOR.INNER),
+			wall(415, 511, 20, 160, COLOR.INNER),
 
 			// flipper walls (left, right);
 			wall(100, 630, 20, 115, COLOR.INNER, -0.96),
-			wall(350, 630, 20, 115, COLOR.INNER, 0.96),
+			wall(361, 624, 20, 145, COLOR.INNER, 0.96),
 
 			// aprons (left, right)
 			path(79, 740, PATHS.APRON_LEFT),
