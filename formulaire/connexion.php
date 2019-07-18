@@ -12,13 +12,12 @@ session_start();
 <body>
     <main class="vh-100 d-flex flex-column d-flex justify-content-center align-items-center">
     <div class="fixed-top justify-content-end row mr-1">
-        <a href="../formulaire/inscription.php"><button type="button" class="btn btn-danger ">Inscription</button></a>
     </div>
     
         <h1 class="text-danger">PinballCrous</h1>
         <p>Connectez-vous !!</p>
         <div class="d-inline-block">
-            <form>
+            <form name="formconnexion" method="post" action="../Controller/traitement_connexion_inscription.php"> 
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" class="form-control" id="email" placeholder="Entrez email">
@@ -31,8 +30,15 @@ session_start();
             </form>
         </div>
         <div class="fixed-bottom justify-content-end row mr-1">
-                <a href="../templates/index.php" ><button type="button" class="btn btn-danger">menu</button></a>
+                <a href="../templates/index.php" ><button type="button" class="btn btn-danger">Menu</button></a>
         </div>
+        <div class="row">
+            <div class="col-8 col-lg-12 pl-5 mx-auto text-right red-text">
+               <b><?php if(isset($_SESSION['erreur'])){?>
+                  <i class="fas fa-exclamation-circle"></i> <?php echo $_SESSION['erreur'];}?>
+               </b>
+            </div>
+         </div>
     </main>
 
 
