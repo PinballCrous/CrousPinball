@@ -67,7 +67,7 @@
 
                 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
                 <script src='https://cdn.rawgit.com/schteppe/poly-decomp.js/1ef946f1/build/decomp.min.js'></script>
-                <script src="../js/matter.min.js"></script>
+                <script src='https://cdn.rawgit.com/liabru/matter-js/0895d81f/build/matter.min.js'></script>
                 <script src='https://cdn.rawgit.com/liabru/matter-attractors/c470ed42/build/matter-attractors.min.js'></script>
 
 
