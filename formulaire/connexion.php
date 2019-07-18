@@ -9,6 +9,11 @@
 
 <body>
     <main class="vh-100 d-flex flex-column d-flex justify-content-center align-items-center">
+    <div class="fixed-top justify-content-end row mr-1">
+        <a href="../formulaire/connexion.php" ><button type="button" class="btn btn-danger">Connexion</button></a>
+        <a href="../formulaire/inscription.php"<button type="button" class="btn btn-danger ">Inscription</button></a>
+    </div>
+    
         <h1 class="text-danger">PinballCrous</h1>
         <p>Connectez-vous !!</p>
         <div class="d-inline-block">
@@ -23,6 +28,9 @@
                 </div>
                 <button type="submit" class="btn btn-success">Submit</button>
             </form>
+        </div>
+        <div class="fixed-bottom justify-content-end row mr-1">
+                <a href="../templates/index.php" ><button type="button" class="btn btn-danger">menu</button></a>
         </div>
     </main>
 

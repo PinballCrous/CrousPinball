@@ -16,7 +16,7 @@
             <h1 class="text-danger">PinballCrous</h1>
             <p>Bienvenue sur le FlipperCrous ici vous trouverez un jeu ludique pour mieux connaitre le crous</p>
             <div class="d-inline-block">
-            <button type="button" class="btn btn-danger">Jouer une partie simple</button>
+            <a href="../decouverte/gamedecouverte.php"><button type="button" class="btn btn-danger">Jouer une partie simple</button></a>
             <a href="../defis/indexDefis.php"><button type="button" class="btn btn-danger">Jouer une partie à thème</button></a>
         </div>
         </div>
