@@ -12,6 +12,7 @@ session_start();
 <body>
     <main class="vh-100 d-flex flex-column d-flex justify-content-center align-items-center">
     <div class="fixed-top justify-content-end row mr-1">
+    <a href="../formulaire/inscription.php" ><button type="button" class="btn btn-danger">Inscription</button></a>
     </div>
     
         <h1 class="text-danger">PinballCrous</h1>
