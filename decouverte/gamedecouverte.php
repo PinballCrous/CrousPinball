@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <?php include '../templates/includes/css.php'; ?>
+    <link rel="stylesheet" href="../css/style.css">
     <title>Menu defis</title>
 </head>
 

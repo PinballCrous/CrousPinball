@@ -173,7 +173,26 @@ canvas {
 	color: black;
 }
 
+.btn_menu{
+	bottom: 5%;
+	right: 30%;
+	transform: translate(-50%, -100%);
+	position: absolute;
+	border: none;
+	background-color: #A80606;
+	height: 3vh;
+	border-radius: 5px;
+}
 
+.btn_menu:hover{
+	box-shadow: 5px 5px 5px #A50303;
+}
+
+.btn_menu a{
+	color: white;
+	text-decoration: none;
+	font-size: 1.5em;
+}
 
 #centr,#regio,#oeuvr,#unive,#scola {
 	font-weight: bold;
