@@ -1,44 +1,42 @@
 //classe user
 <?
 class Utilisateur{
-    private id_utilisateur;
-    private pseudo;
-    private mail;
-    private mdp;
-    private nom;
-    private prenom;
-    private role;
-    private highscore;
+    private $id_utilisateur;
+    private $pseudo;
+    private $mail;
+    private $mdp;
+    private $nom;
+    private $prenom;
+    private $role;
+    private $highscore;
     
     //getter
-    getId_utilisateur(){return $this->id_utilisateur;}
-    getPseudo(){return $this->pseudo;}
-    getNom(){return $this->nom;}
-    getPrenom(){return $this->prenom;}
-    getMail(){return $this->mail;}
-    getMdp(){return $this->mdp;}
-    getRole(){return $this->role;}
-    getHighscore(){return $this->highscore;}
+    public function getId_utilisateur(){return $this->id_utilisateur;}
+    public function getPseudo(){return $this->pseudo;}
+    public function getNom(){return $this->nom;}
+    public function getPrenom(){return $this->prenom;}
+    public function getMail(){return $this->mail;}
+    public function getMdp(){return $this->mdp;}
+    public function getRole(){return $this->role;}
+    public function getHighscore(){return $this->highscore;}
 
     //setter
-    setPseudo($pseudo){
-        if(isset($pseudo){
+    public function setPseudo($pseudo){
             $this->pseudo = $pseudo;
-        }
     }
-    setNom($nom){
+    public function setNom($nom){
         $this->nom = $nom;
     }
-    setPrenom($prenom){
+    public function setPrenom($prenom){
         $this->prenom = $prenom;
     }
-    setMail($mail){
+    public function setMail($mail){
         $this->mail = $mail;
     }
-    setMdp($mdp){
+    public function setMdp($mdp){
         $this->mdp = $mdp;
     }
-    setRole($role){
+    public function setRole($role){
         $this->role = $role;
     }
 }
