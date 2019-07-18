@@ -63,7 +63,7 @@
                     <p class="definition" id="scola">Scolaires</p>
                 </div>
                 <div>
-                    <button class="btn_menu"><a href="menu.html">Menu</a></button>
+                    <button class="btn_menu"><a href="../defis/IndexDefis.php">Menu</a></button>
                 </div>
 
                 <audio src="musique/blaster.mp3" id="blaster"></audio>
