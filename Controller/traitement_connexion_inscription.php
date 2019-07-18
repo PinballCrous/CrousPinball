@@ -8,21 +8,28 @@ spl_autoload_register(function($class_name){
 if(isset($_POST['formconnexion'])) {
 
    //Récupération information du formulaire
-      $mailconnect = htmlspecialchars($_POST['mail']);
+      $mailconnect = htmlspecialchars($_POST['email']);
       $mdpconnect = $_POST['password'];
+      // echo $mailconnect."<br>";
+      // echo $mdpconnect;
 
    //lecture dans la bdd (table correspondant à la catégorie) du mdp qui correspond au mail entrez dans le formulaire
    if(!empty($mailconnect)&&!empty($mdpconnect)){  
 
-      $req = $bdd->query("SELECT mdp,id_utilisateur ,pseudo FROM utilisateur WHERE mail = '".$mailconnect."'")->fetch(PDO::FETCH_ASSOC);
-
+      $req = $bdd->query('SELECT mdp,id_utilisateur ,pseudo, role FROM utilisateur WHERE mail = "'.$mailconnect.'"')->fetch(PDO::FETCH_ASSOC);
+      var_dump($req);
       if(password_verify($mdpconnect,$req['mdp'])){
          //initialisation session
-         session_unset();session_destroy();session_start();
+         session_unset();
+         session_destroy();
+         session_start();
          $_SESSION['id_utilisateur'] = $req['id_utilisateur'];
          $_SESSION['pseudo'] = $req['pseudo'];
          $_SESSION['mail'] = $mailconnect;
          $_SESSION['role'] = $req['role'];
+         // echo $_SESSION['role'];
+         // echo $_SESSION['pseudo'];
+         header('Location:../templates/index.php');
       }else{
           $_SESSION['erreur'] = "Mauvais mail ou mot de passe !";
           header('Location:../formulaire/connexion.php');
@@ -117,5 +124,5 @@ if(isset($_POST['forminscription'])) {
    }
 }
 
-header('Location:../templates/index.php');
+echo "<br>coucou";
 ?>

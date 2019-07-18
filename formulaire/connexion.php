@@ -18,16 +18,16 @@ session_start();
         <h1 class="text-danger">PinballCrous</h1>
         <p>Connectez-vous !!</p>
         <div class="d-inline-block">
-            <form name="formconnexion" method="post" action="../Controller/traitement_connexion_inscription.php"> 
+            <form method="post" action="../Controller/traitement_connexion_inscription.php"> 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Entrez email">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Entrez email">
                 </div>
                 <div class="form-group">
                     <label for="Password">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Mot de passe">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe">
                 </div>
-                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="submit" name="formconnexion" id="formconnexion" class="btn btn-success">Submit</button>
             </form>
             <div class="row">
             <div class="col-8 mx-auto text-right red-text">

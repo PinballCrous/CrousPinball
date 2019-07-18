@@ -49,7 +49,7 @@ session_start();
                     <input type="password" class="form-control" id="password2" placeholder="Confirmez votre mot de passe">
                 </div>
 
-                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="submit" name="forminscription" id="forminscription" class="btn btn-success">Submit</button>
             </form>
             <div class="row">
             <div class="col-8 mx-auto text-right red-text">
