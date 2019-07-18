@@ -62,8 +62,8 @@
                     <button class="btn_menu"><a href="../defis/IndexDefis.php">Menu</a></button>
                 </div>
 
-                <audio src="musique/blaster.mp3" id="blaster"></audio>
-                <audio id="theme" src="musique/theme.mp3" loop autoplay></audio>
+                <!-- <audio src="musique/blaster.mp3" id="blaster"></audio>
+                <audio id="theme" src="musique/theme.mp3" loop autoplay></audio> -->
 
                 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
                 <script src='https://cdn.rawgit.com/schteppe/poly-decomp.js/1ef946f1/build/decomp.min.js'></script>
@@ -73,11 +73,11 @@
 
 
                 <script src="../js/index.js"></script>
-                <audio id="blaster" src="musique/blaster.mp3"></audio>
+                <!-- <audio id="blaster" src="musique/blaster.mp3"></audio>
                 <audio id="theme" loop="" autoplay="" src="musique/theme.mp3"></audio>
                 <audio id="PADDLE" src="musique/PADDLE.mp3"></audio>
                 <audio id="launch" src="musique/launch.mp3"></audio>
-                <audio id="letter" src="musique/letter.mp3"></audio>
+                <audio id="letter" src="musique/letter.mp3"></audio> -->
 
 
 
