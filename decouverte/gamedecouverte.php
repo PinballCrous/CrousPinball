@@ -76,7 +76,7 @@
 
 
 
-                <script src="js/index.js"></script>
+                <script src="../js/index.js"></script>
                 <audio id="blaster" src="musique/blaster.mp3"></audio>
                 <audio id="theme" loop="" autoplay="" src="musique/theme.mp3"></audio>
                 <audio id="PADDLE" src="musique/PADDLE.mp3"></audio>
