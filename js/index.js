@@ -373,9 +373,9 @@
 				}
 			}
 
-			var theme = document.querySelector('#theme');
-			theme.play();
-			// Musique de theme ligne 271!
+			// var theme = document.querySelector('#theme');
+			// theme.play();
+			// // Musique de theme ligne 271!
 
 
 			// bumpers can quickly multiply velocity, so keep that in check
