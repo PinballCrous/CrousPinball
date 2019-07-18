@@ -40,7 +40,7 @@ class UtilisateurManager{
   }      
 
   public function getUtilisateurteurbyId($id) {
-    $donnees = $this->_db->query('SELECT * FROM agriculteur WHERE id_utilisateurteur ='.$id)->fetch(PDO::FETCH_ASSOC);
+    $donnees = $this->_db->query('SELECT * FROM utilisateur WHERE id_utilisateurteur ='.$id)->fetch(PDO::FETCH_ASSOC);
     return new Utilisateur($donnees);
   }   
 
