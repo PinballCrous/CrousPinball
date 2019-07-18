@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+session_start();
+?>
 <head>
     <meta charset="UTF-8">
     <?php include '../templates/includes/css.php'; ?>
@@ -10,8 +12,7 @@
 <body>
     <main class="vh-100 d-flex flex-column d-flex justify-content-center align-items-center">
     <div class="fixed-top justify-content-end row mr-1">
-        <a href="../formulaire/connexion.php" ><button type="button" class="btn btn-danger">Connexion</button></a>
-        <a href="../formulaire/inscription.php"<button type="button" class="btn btn-danger ">Inscription</button></a>
+        <a href="../formulaire/inscription.php"><button type="button" class="btn btn-danger ">Inscription</button></a>
     </div>
     
         <h1 class="text-danger">PinballCrous</h1>

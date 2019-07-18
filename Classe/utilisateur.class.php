@@ -1,14 +1,13 @@
 //classe user
-class user{
-    constructor(id_utilisateur,pseudo, nom, prenom, mail, mdp, mail, role){
-        this.id_utilisateur = id_utilisateur;
-        this.pseudo = pseudo;
-        this.nom = nom;
-        this.prenom = prenom;
-        this.mail = mail;
-        this.mdp = mdp;
-        this.role = role;
-    }
+class Utilisateur{
+    private id_utilisateur;
+    private pseudo;
+    private mail;
+    private mdp;
+    private nom;
+    private prenom;
+    private role;
+    private highscore;
     
     //getter
     getId_utilisateur(){return this.id_utilisateur;}
