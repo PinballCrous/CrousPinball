@@ -21,7 +21,7 @@
 		PADDLE: '#A80606',
 		PINBALL: '#E30000'
 	};
-	const GRAVITY = 0.55;
+	const GRAVITY = 0.60;
 	const WIREFRAMES = false;
 	const BUMPER_BOUNCE = 1.5;
 	const PADDLE_PULL = 0.002;
@@ -113,9 +113,8 @@
 			wall(300, 140, 10, 40, COLOR.INNER, 0, 5),
 			wall(350, 140, 10, 40, COLOR.INNER, 0, 5),
 
-			// top bumpers (left, mid, right)
+			// top bumpers (left, right)
 			bumper(105, 250),
-			bumper(225, 250),
 			bumper(345, 250),
 
 			// bottom bumpers (left, right)
