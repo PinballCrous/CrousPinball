@@ -121,6 +121,7 @@
 			// bottom bumpers (left, right)
 			bumper(165, 340),
 			bumper(285, 340),
+			bumper(230, 420),
 
 			// shooter lane wall
 			wall(440, 520, 20, 530, COLOR.OUTER),
@@ -138,7 +139,7 @@
 			wall(415, 511, 20, 160, COLOR.INNER),
 
 			// flipper walls (left, right);
-			wall(87, 624, 20, 145, COLOR.INNER, -0.96),
+			wall(90, 624, 20, 145, COLOR.INNER, -0.96),
 			wall(360, 624, 20, 145, COLOR.INNER, 0.96),
 
 			// aprons (left, right)
