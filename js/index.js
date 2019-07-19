@@ -62,7 +62,7 @@
 		world = engine.world;
 		world.bounds = {
 			min: { x: 0, y: 0},
-			max: { x: 500, y: 800 }
+			max: { x: 600, y: 800 }
 		};
 		world.gravity.y = GRAVITY;
 
@@ -98,9 +98,9 @@
 		Matter.World.add(world, [
 			// table boundaries (top, bottom, left, right)
 			boundary(250, -30, 500, 100),
-			boundary(250, 830, 500, 100),
+			boundary(450, 830, 900, 100,),
 			boundary(-30, 400, 100, 800),
-			boundary(530, 400, 100, 800),
+			boundary(550, 400, 140, 800),
 
 			// dome
 			path(239, 86, PATHS.DOME),
