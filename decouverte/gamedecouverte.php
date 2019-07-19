@@ -59,7 +59,7 @@
                     <p class="definition" id="scola">Scolaires</p>
                 </div>
                 <div class="prebtn">
-                    <button class="btn_menu"><a href="../templates/index.php">Menu</a></button>
+                    <a href="../templates/index.php"><button class="btn_menu">Menu</button></a>
                 </div>
 
                 <!-- <audio src="musique/blaster.mp3" id="blaster"></audio>
