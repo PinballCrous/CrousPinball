@@ -114,14 +114,12 @@
 			wall(350, 140, 10, 40, COLOR.INNER, 0, 5),
 
 			// top bumpers (left, mid, right)
-			bumper(105, 250),
-			bumper(225, 250),
-			bumper(345, 250),
+			bumper(140, 250),
+			bumper(320, 250),
 
 			// bottom bumpers (left, right)
-			bumper(165, 340),
-			bumper(285, 340),
-			bumper(230, 420),
+		
+			bumper(230, 340),
 
 			// shooter lane wall
 			wall(440, 520, 20, 530, COLOR.OUTER),
@@ -141,6 +139,10 @@
 			// flipper walls (left, right);
 			wall(90, 624, 20, 145, COLOR.INNER, -0.96),
 			wall(360, 624, 20, 145, COLOR.INNER, 0.96),
+			wall(390, 280, 12, 99, COLOR.BUMPER, 1.10),
+			wall(65, 280, 12, 99, COLOR.BUMPER, -1.10),
+			wall(137, 445, 15, 70, COLOR.INNER, 1.10),
+			wall(323, 445, 15, 70, COLOR.INNER, -1.10),
 
 			// aprons (left, right)
 			path(79, 740, PATHS.APRON_LEFT),
