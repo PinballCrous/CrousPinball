@@ -23,8 +23,8 @@
 	};
 	const GRAVITY = 0.60;
 	const WIREFRAMES = false;
-	const BUMPER_BOUNCE = 1.5;
-	const PADDLE_PULL = 0.002;
+	const BUMPER_BOUNCE = 1.8;
+	const PADDLE_PULL = 0.001;
 	const MAX_VELOCITY = 60;
 
 	// score elements
@@ -254,9 +254,13 @@
 				group: stopperGroup
 			},
 			render: {
-				fillStyle: COLOR.PINBALL
+				sprite: {
+					texture: '../img/ball.png'
+				}
 			},
 			isStatic: true
+				
+			
 		});
 		Matter.World.add(world, pinball);
 		levelCurrent = 1;
