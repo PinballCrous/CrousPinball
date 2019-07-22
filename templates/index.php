@@ -18,9 +18,15 @@ session_start();
                         echo '<a href="../formulaire/gestion_utilisateur.php" ><button type="button" class="btn text-white danger-color-dark">Gestion Utilisateur</button></a>';
                     }
                     ?>
-                <?php if(isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])){echo '<a href="../formulaire/deconnexion.php" ><button type="button" class="btn text-white danger-color-dark">deconnexion</button></a>';}?>
-                <a href="../formulaire/connexion.php" ><button type="button" class="btn text-white danger-color-dark">Connexion</button></a>
-                <a href="../formulaire/inscription.php"><button type="button" class="btn text-white danger-color-dark">Inscription</button></a>
+                <?php 
+                    if(isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])){
+                        echo '<a href="../formulaire/deconnexion.php" ><button type="button" class="btn text-white danger-color-dark">deconnexion</button></a>';
+                    }else{
+                       echo '<a href="../formulaire/connexion.php" ><button type="button" class="btn text-white danger-color-dark">Connexion</button></a>';
+                        echo '<a href="../formulaire/inscription.php"><button type="button" class="btn text-white danger-color-dark">Inscription</button></a>';
+                    }
+                ?>
+                
             </div>
 
             <h1 class="text-danger">PinballCrous</h1>
