@@ -97,7 +97,7 @@ if(isset($_POST['forminscription'])) {
                      // </html>
                      // ';
                      // mail($mail, "Confirmation de compte", $message, $header);
-                     $_SESSION['erreur'] = "Votre compte a bien été créé ! <a href=\"connexion.php\">Me connecter</a>";
+                     $_SESSION['erreur'] = 'Votre compte a bien été créé ! <a href="connexion.php">Me connecter</a>';
                      header('Location:../formulaire/inscription.php');
                   } else {
                      $_SESSION['erreur'] = "Vos mots de passes ne correspondent pas !";
