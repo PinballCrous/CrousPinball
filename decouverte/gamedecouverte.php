@@ -23,6 +23,7 @@
 
                     <button class="trigger left-trigger">tap!</button>
                     <button class="trigger right-trigger">tap!</button>
+                    <button class="lancer">Lancer</button>
 
                     <div class="letter" id="c">C</div>
                     <div class="letter" id="r">R</div>
