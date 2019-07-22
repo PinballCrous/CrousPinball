@@ -45,7 +45,7 @@ class UtilisateurManager{
       return ($delete_utilisateur->rowCount());
   }      
 
-  public function getUtilisateurteurbyId($id) {
+  public function getUtilisateurbyId($id) {
     $donnees = $this->bdd->query('SELECT * FROM utilisateur WHERE id_utilisateurteur ='.$id)->fetch(PDO::FETCH_ASSOC);
     return new Utilisateur($donnees);
   }   
