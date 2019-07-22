@@ -423,6 +423,12 @@
 			}
 		});
 
+		$('.lancer').click(function(){
+			if(isReset){
+				launchPinball();
+			}
+		})
+
 
 		// click/tap paddle events
 		$('.left-trigger')
