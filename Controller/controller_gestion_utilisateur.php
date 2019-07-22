@@ -15,11 +15,11 @@ if(isset($_POST['action']) && $_POST['action']=='affiche_utilisateur'){
 
 
 // suppression
-// if(	isset($_POST['action']) && $_POST['action']=='supprime_utilisateur' &&
-// 	isset($_POST['id_utilisateur']) && !empty($_POST['id_utilisateur']) ) {
+if(	isset($_POST['action']) && $_POST['action']=='supprime_utilisateur' &&
+	isset($_POST['id_utilisateur']) && !empty($_POST['id_utilisateur']) ) {
 
-// 	echo json_encode($managerutilisateur->deleteutilisateur($_POST['id_utilisateur']));
-// }
+	echo json_encode($managerutilisateur->deleteutilisateur($_POST['id_utilisateur']));
+}
 
 // récupération des données pour update
 if(	isset($_POST['action']) && $_POST['action']=='get_utilisateur' &&

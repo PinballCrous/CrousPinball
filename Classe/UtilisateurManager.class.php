@@ -51,13 +51,13 @@ class UtilisateurManager{
   }   
 
   public function getListUtilisateur() {
-    // $utilisateur = [];
-    // $q = $this->bdd->query('SELECT * FROM utilisateur ORDER BY utilisateur.id_utilisateur ASC;');
-    // while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
-    //   $utilisateur[] = new Utilisateur($donnees);
-    // }
-    // return $utilisateur;
-    return $utilisateur = $this->bdd->query('SELECT * FROM utilisateur ORDER BY utilisateur.id_utilisateur ASC')->fetchAll(PDO::FETCH_ASSOC);
+    $utilisateur = [];
+    $q = $this->bdd->query('SELECT * FROM utilisateur ORDER BY utilisateur.id_utilisateur ASC;');
+    while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
+      $utilisateur[] = new Utilisateur($donnees);
+    }
+    return $utilisateur;
+    // return $utilisateur = $this->bdd->query('SELECT * FROM utilisateur ORDER BY utilisateur.id_utilisateur ASC')->fetchAll(PDO::FETCH_ASSOC);
   }
 
     public function setBDD($bdd){
