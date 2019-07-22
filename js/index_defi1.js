@@ -258,7 +258,9 @@
 				group: stopperGroup
 			},
 			render: {
-				fillStyle: COLOR.PINBALL
+				sprite: {
+					texture: '../img/ball.png'
+				}
 			},
 			isStatic: true
 		});
