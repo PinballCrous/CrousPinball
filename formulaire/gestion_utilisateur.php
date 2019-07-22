@@ -15,7 +15,7 @@ require_once('../templates/includes/css.php');
 </head>
 <div class="row ">
 	<div class="col-10 mx-auto">
-		<button class="btn text-white danger-color-dark">Retour</button>
+		<a href="../templates/index.php"><button class="btn text-white danger-color-dark">Retour</button></a>
 	</div>
 </div>
 <div class="row">
