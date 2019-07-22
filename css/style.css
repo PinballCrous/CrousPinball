@@ -250,6 +250,10 @@ canvas {
   outline: none;
 }
 
+
+
+
+
 /* responsive scaling, because pinball tables are tall */
 @media (min-height: 0px) {
 	.container { -webkit-transform: scale(0.25); transform: scale(0.25); }
