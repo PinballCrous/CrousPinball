@@ -23,7 +23,7 @@ body {
 
 .button{
 	color: white;
-	background: #A80606;
+	background: #CC0000;
 	font-size: 50px;
 	padding: 10px;
 	margin: 10px;
@@ -38,7 +38,7 @@ body {
 	position: absolute;
 	top: 10px;
 	line-height: 1;
-	color: #A80606;
+	color: #CC0000;
 }
 
 .level{
@@ -78,7 +78,7 @@ body {
   border: 0;
 	border-radius: 50%;
   color: inherit;
-	background-color: #E30000;
+	background-color: #CC0000;
 	text-align: center;
 	line-height: 80px;
 	font-size: 1.25rem;
@@ -147,7 +147,7 @@ canvas {
 }
 
 #monthDisplay {
-	color: #A80606;
+	color: #CC0000;
 	position: absolute;
 	top: 70%;
 	left: 5vw;
@@ -220,7 +220,34 @@ canvas {
 
 #centr,#regio,#oeuvr,#unive,#scola {
 	font-weight: bold;
-	color: #FF4900;
+	color: #CC0000;
+}
+
+.lancer{
+	right: 1vh;
+	position: absolute;
+	bottom: 1vh;
+	-webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	bottom: 10px;
+  border: 0;
+	border-radius: 50%;
+  color: inherit;
+	background-color: #CC0000;
+	text-align: center;
+	line-height: 80px;
+	font-size: 1.25rem;
+  text-transform: inherit;
+	cursor: pointer;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+  outline: none;
 }
 
 /* responsive scaling, because pinball tables are tall */
