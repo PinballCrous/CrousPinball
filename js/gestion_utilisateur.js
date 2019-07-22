@@ -8,7 +8,7 @@ function afficheutilisateur() {
             function (utilisateurs) { 
                 if(utilisateurs.length > 0){
                     let tab=''; 
-                    console.log (utilisateur);
+                    console.log (utilisateurs);
                     utilisateurs.forEach(utilisateur => {
                         tab += '<tr>';
                             tab += '<td>'+utilisateur.id_utilisateur+'</td>';                           
