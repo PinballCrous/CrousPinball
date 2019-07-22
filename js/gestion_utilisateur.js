@@ -36,7 +36,7 @@ $('#utilisateur').on('submit', function(e){
     //je constitue mon paramètre
     let params='action=ajout_utilisateur&'+$(this).serialize();
     // console.log(params); // pensez à vérifier vos données ça peut servir !!
-    $.post('Traitement.php', // URL du dossier où s'effectue le traitement
+    $.post('../Controller/controller_gestion_utilisateur.php', // URL du dossier où s'effectue le traitement
             params,  // Valeurs à 'envoyer' contenues dans la variable params
             function (ajout) { 
  				if (ajout) {
@@ -57,7 +57,7 @@ $('.insert').on('click','.effacer', function(e) {
 	if (choix) {
 		// traitement ajax de l'effacement
 		params = 'action=supprime_utilisateur&id_utilisateur='+efface_id;
-	    $.post('Traitement.php', // URL du dossier où s'effectue le traitement
+	    $.post('../Controller/controller_gestion_utilisateur.php', // URL du dossier où s'effectue le traitement
 	            params,  // Valeurs à 'envoyer' contenues dans la variable params
 	            function (supprime) {  
 	 				if (supprime) {
@@ -76,17 +76,18 @@ var ligne_a_modifier = '';
 
 $('.insert').on('click','.modifier', function(e) {
 	e.preventDefault();
+    console.log('coucou');
 	update_id = $(this).attr('id');
 	ligne_a_modifier = $(this).closest('tr');
 	infos_utilisateur = 'action=get_utilisateur&id_utilisateur='+update_id;
-    $.post('Traitement.php', // URL du dossier où s'effectue le traitement
+    $.post('../Controller/controller_gestion_utilisateur.php', // URL du dossier où s'effectue le traitement
             infos_utilisateur,  // Valeurs à 'envoyer' contenues dans la variable params
             function (infos) {  
             	$('.modal-title').html('Modification du utilisateur n° '+update_id);
-				$('#marque_update').val(infos.marque);	
-				$('#modele_update').val(infos.modele);
-                $('#couleur_update').val(infos.couleur);
-                $('#immatriculation_update').val(infos.immatriculation);
+				$('#nom_update').val(infos.nom);	
+				$('#prenom_update').val(infos.prenom);
+                $('#mail_update').val(infos.mail);
+                $('#pseudo_update').val(infos.pseudo);
 				$('#modalLoginForm').modal('show');					
             }, 'json');	// fin de l'ajax
 });	
@@ -94,23 +95,22 @@ $('.insert').on('click','.modifier', function(e) {
 // validation des modifications et mise à jour de la BDD
 $("#btnSaveIt").on('click', function (e) {
 	e.preventDefault();
-	let update_marque = $('#marque_update').val();
-	let update_modele = $('#modele_update').val();
-    let update_couleur = $('#couleur_update').val();
-    let update_immatriculation = $('#immatriculation_update').val();
+	let update_nom = $('#nom_update').val();
+	let update_prenom = $('#prenom_update').val();
+    let update_mail = $('#mail_update').val();
+    let update_pseudo = $('#pseudo_update').val();
 	let params='action=modification_utilisateur&'+$('#utilisateur_update').serialize()+'&id_utilisateur='+update_id;
-    $.post('Traitement.php', // URL du dossier où s'effectue le traitement
+    $.post('../Controller/controller_gestion_utilisateur.php', // URL du dossier où s'effectue le traitement
             params,  // Valeurs à 'envoyer' contenues dans la variable params
             function (update) {
             	if (update) {
                     // on ne va remettre à jour à l'écran uniquement la ligne qui vient d'être modifié en BDD dans le tableau
                     let ligne=''; 
-                    ligne += '<tr>';
-                        ligne += '<td>'+update_id+'</td>';                           
-                        ligne += '<td>'+update_marque+'</td>';
-                        ligne += '<td>'+update_modele+'</td>';
-                        ligne += '<td>'+update_couleur+'</td>';
-                        ligne += '<td>'+update_immatriculation+'</td>';
+                    ligne += '<tr>';                           
+                        ligne += '<td>'+update_nom+'</td>';
+                        ligne += '<td>'+update_prenom+'</td>';
+                        ligne += '<td>'+update_mail+'</td>';
+                        ligne += '<td>'+update_pseudo+'</td>';
                         ligne += '<td><i id='+update_id+' class="modifier fas fa-pen blue-text"></i></td>';   
                         ligne += '<td><i id='+update_id+' class="effacer fas fa-times blue-text"></i></td>';                                
      				ligne += '</tr>';
