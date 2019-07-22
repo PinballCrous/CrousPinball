@@ -45,18 +45,25 @@ if(isset($_POST['formconnexion'])) {
 if(isset($_POST['forminscription'])) {
    $mail = htmlspecialchars($_POST['mail']);
    $mail2 = htmlspecialchars($_POST['mail2']);
-
-
-   $mdp = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
-   $mdp2 = password_hash($_POST['mdp2'], PASSWORD_DEFAULT);
+   $mdp = $_POST['mdp'];
+   $mdp2 = $_POST['mdp2'];
+   $mdph = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
+   $mdph2 = password_hash($_POST['mdp2'], PASSWORD_DEFAULT);
    $nom = htmlspecialchars($_POST['nom']);
    $prenom = htmlspecialchars($_POST['prenom']);
    $pseudo = htmlspecialchars($_POST['pseudo']);
 
+   echo $mail."<br>";
+   echo $mail2."<br>";
+   echo $mdp."<br>";
+   echo $mdp2."<br>";
+   echo $nom."<br>";  
+   echo $prenom."<br>";
+   echo $pseudo."<br>";
+   var_dump(file_exists("../Classe/Utilisateur.class.php"));
+   echo "<br>";
    
-   
-   
-   if(!empty($_POST['pseudo']) AND !empty($_POST['mail']) AND !empty($_POST['mail2']) AND !empty($_POST['mdp']) AND !empty($_POST['mdp2'])) {
+   if(!empty($_POST['pseudo']) && !empty($_POST['mail']) && !empty($_POST['mail2']) && !empty($_POST['mdp']) && !empty($_POST['mdp2'])) {
       $pseudolength = strlen($pseudo);
       if($pseudolength <= 255) {
          if($mail == $mail2) {
@@ -64,8 +71,6 @@ if(isset($_POST['forminscription'])) {
                $reqmail = $bdd->prepare("SELECT * FROM utilisateur WHERE mail = ?");
                $reqmail->execute(array($mail));
                $mailexist = $reqmail->rowCount();
-
-               $mailexist = $bdd->query('SELECT * FROM utilisateur WHERE mail = '.$mail)->fetchColumn();
                if($mailexist == 0) {
                   if($mdp == $mdp2) {
                      $longueurKey = 15;
@@ -73,14 +78,10 @@ if(isset($_POST['forminscription'])) {
                      for($i=1;$i<$longueurKey;$i++) {
                         $key .= mt_rand(0,9);
                      }
-
-
-
-                     $date_creation_compte = date('Y-m-d H:i:s');
-
                      $utilisateurManager = new UtilisateurManager($bdd);
-                     $new_utilisateur = new Utilisateur( array('pseudo' => $pseudo,'nom' => $nom, 'prenom' =>  $prenom, 'mail' => $mail, 'mdp' => $mdp, 'role' => "user" ));
-                     $utilisateurManager->add($new_user);
+                     $new_utilisateur = new Utilisateur( array('pseudo' => $pseudo,'nom' => $nom, 'prenom' =>  $prenom, 'mail' => $mail, 'mdp' => $mdph, 'role' => "user" ));
+                     var_dump($new_utilisateur);
+                     $utilisateurManager->add($new_utilisateur);
                      
                      // $header="MIME-Version: 1.0\r\n";
                      // $header.='From:"Viandedirect"<support@Viande-direct.com>'."\n";
@@ -100,27 +101,27 @@ if(isset($_POST['forminscription'])) {
                      header('Location:../formulaire/inscription.php');
                   } else {
                      $_SESSION['erreur'] = "Vos mots de passes ne correspondent pas !";
-                     header('Location:../formulaire/inscription.php');
+                     // header('Location:../formulaire/inscription.php');
                   }
                } else {
                   $_SESSION['erreur'] = "Adresse mail déjà utilisée !";
-                  header('Location:../formulaire/inscription.php');
+                  // header('Location:../formulaire/inscription.php');
                }
             } else {
                $_SESSION['erreur'] = "Votre adresse mail n'est pas valide !";
-               header('Location:../formulaire/inscription.php');
+               // header('Location:../formulaire/inscription.php');
             }
          } else {
             $_SESSION['erreur'] = "Vos adresses mail ne correspondent pas !";
-            header('Location:../formulaire/inscription.php');
+            // header('Location:../formulaire/inscription.php');
          }
       } else {
          $_SESSION['erreur'] = "Votre pseudo ne doit pas dépasser 255 caractères !";
-         header('Location:../formulaire/inscription.php');
+         // header('Location:../formulaire/inscription.php');
       }
    } else {
       $_SESSION['erreur'] = "Tous les champs doivent être complétés !";
-      header('Location:../formulaire/inscription.php');
+      // header('Location:../formulaire/inscription.php');
    }
 }
 
