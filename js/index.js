@@ -137,7 +137,7 @@
 			wall(415, 511, 20, 160, COLOR.INNER),
 
 			// flipper walls (left, right);
-			wall(87, 624, 20, 145, COLOR.INNER, -0.96),
+			wall(89, 624, 20, 145, COLOR.INNER, -0.96),
 			wall(360, 624, 20, 145, COLOR.INNER, 0.96),
 
 			// aprons (left, right)
