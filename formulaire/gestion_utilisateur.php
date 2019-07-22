@@ -13,6 +13,11 @@ require_once('../templates/includes/css.php');
               integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
               crossorigin="anonymous">
 </head>
+<div class="row ">
+	<div class="col-10 mx-auto">
+		<button class="btn text-white danger-color-dark">Retour</button>
+	</div>
+</div>
 <div class="row">
 	<div class="col-10 mx-auto">
 		<div class='table-responsive my-4'>
