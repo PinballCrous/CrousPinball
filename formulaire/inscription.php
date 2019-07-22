@@ -25,7 +25,7 @@ session_start();
                     <input type="text" class="form-control" id="nom" name="nom" placeholder="Entrez votre nom">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Entrez votre nom">
+                    <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Entrez votre prenom">
                 </div>
                 <div class="form-group">
                     <input type="email" class="form-control" id="mail" name="mail" aria-describedby="emailHelp" placeholder="Entrez email">
