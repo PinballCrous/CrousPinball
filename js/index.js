@@ -21,10 +21,10 @@
 		PADDLE: '#A80606',
 		PINBALL: '#E30000'
 	};
-	const GRAVITY = 0.60;
+	const GRAVITY = 0.55;
 	const WIREFRAMES = false;
 	const BUMPER_BOUNCE = 1.8;
-	const PADDLE_PULL = 0.001;
+	const PADDLE_PULL = 0.002;
 	const MAX_VELOCITY = 60;
 
 	// score elements
@@ -137,9 +137,9 @@
 			wall(415, 511, 20, 160, COLOR.INNER),
 
 			// flipper walls (left, right);
-			wall(87.5, 623, 20, 140.2, COLOR.INNER, -0.96),
+			wall(90, 624, 20, 145, COLOR.INNER, -0.96),
 			wall(360, 624, 20, 145, COLOR.INNER, 0.96),
-
+			
 			// aprons (left, right)
 			path(79, 740, PATHS.APRON_LEFT),
 			path(371, 740, PATHS.APRON_RIGHT),
@@ -420,6 +420,12 @@
 				}
 			}
 		});
+
+		$('.lancer').click(function(){
+			if(isReset){
+				launchPinball();
+			}
+		})
 
 
 		// click/tap paddle events
