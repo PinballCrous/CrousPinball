@@ -61,12 +61,12 @@ body {
 }
 
 .current-score {
-	left: 3vh;
+	left: 30px;
 }
 
 .high-score {
 	text-align: right;
-	right: 3vh;
+	right: 30px;
 }
 
 .trigger {
@@ -95,11 +95,11 @@ body {
 }
 
 .left-trigger {
-	left: 3vh;
+	left: 30px;
 }
 
 .right-trigger {
-	right: 19vh;
+	right: 190px;
 }
 
 canvas {
@@ -120,23 +120,23 @@ canvas {
 }
 
 #c{
-	left: 13vh;
+	left: 125px;
 }
 
 #r{
-	left: 18vh;
+	left: 175px;
 }
 
 #o{
-	left: 23vh;
+	left: 225px;
 }
 
 #u{
-	left: 28vh;
+	left: 275px;
 }
 
 #s{
-	left: 34vh;
+	left: 325px;
 }
 
 #levelDisplay {
@@ -226,7 +226,7 @@ canvas {
 }
 
 .lancer{
-	right: 3vh;
+	right: 30px;
 	position: absolute;
 	bottom: 1vh;
 	-webkit-appearance: none;
