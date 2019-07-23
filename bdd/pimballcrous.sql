@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  mer. 17 juil. 2019 à 14:13
+-- Généré le :  mar. 23 juil. 2019 à 09:02
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.11
 
@@ -21,6 +21,18 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `pimballcrous`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `highscore`
+--
+
+CREATE TABLE `highscore` (
+  `id_highscore` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `score` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -47,19 +59,28 @@ CREATE TABLE `utilisateur` (
   `prenom` varchar(255) NOT NULL,
   `mail` varchar(255) NOT NULL,
   `mdp` varchar(255) NOT NULL,
-  `role` enum('user','admin') NOT NULL
+  `role` enum('user','admin','superadmin') NOT NULL,
+  `Crous` varchar(50) DEFAULT NULL,
+  `id_highscore` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`id_utilisateur`, `pseudo`, `nom`, `prenom`, `mail`, `mdp`, `role`) VALUES
-(1, 'God', 'Dieu', 'Webmasteur', 'dieu@modo.test', 'test', 'admin');
+INSERT INTO `utilisateur` (`id_utilisateur`, `pseudo`, `nom`, `prenom`, `mail`, `mdp`, `role`, `Crous`, `id_highscore`) VALUES
+(1, 'God', 'Dieu', 'Webmasteur', 'dieu@modo.test', '$2y$10$Xb3kLdjqFrw2pcoxAhUDo.y8imBAjnK8paRwQugt6xsHw5QzufyHe', 'superadmin', NULL, NULL),
+(2, 'damdamtherat', 'masserini', 'adam', 'dahu@moi.fr', '$2y$10$xTY2zgaeIkaHGePJ4Ec2DOK7jjUyuvbwoAo/5DiIE/9E8Fiv5q2G2', 'user', NULL, NULL);
 
 --
 -- Index pour les tables déchargées
 --
+
+--
+-- Index pour la table `highscore`
+--
+ALTER TABLE `highscore`
+  ADD PRIMARY KEY (`id_highscore`);
 
 --
 -- Index pour la table `info`
@@ -71,11 +92,18 @@ ALTER TABLE `info`
 -- Index pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  ADD PRIMARY KEY (`id_utilisateur`);
+  ADD PRIMARY KEY (`id_utilisateur`),
+  ADD KEY `id_highscore` (`id_highscore`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
+
+--
+-- AUTO_INCREMENT pour la table `highscore`
+--
+ALTER TABLE `highscore`
+  MODIFY `id_highscore` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `info`
@@ -87,7 +115,17 @@ ALTER TABLE `info`
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `utilisateur`
+--
+ALTER TABLE `utilisateur`
+  ADD CONSTRAINT `utilisateur_ibfk_1` FOREIGN KEY (`id_highscore`) REFERENCES `highscore` (`id_highscore`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

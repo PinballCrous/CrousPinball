@@ -83,12 +83,12 @@ $('.insert').on('click','.modifier', function(e) {
     $.post('../Controller/controller_gestion_utilisateur.php', // URL du dossier où s'effectue le traitement
             infos_utilisateur,  // Valeurs à 'envoyer' contenues dans la variable params
             function (infos) {  
-            	$('.modal-title').html('Modification du utilisateur n° '+update_id);
-				$('#nom_update').val(infos.nom);	
-				$('#prenom_update').val(infos.prenom);
-                $('#mail_update').val(infos.mail);
-                $('#pseudo_update').val(infos.pseudo);
-				$('#modalLoginForm').modal('show');					
+            	// $('.modal-title').html('Modification du utilisateur n° '+update_id);
+				// $('#nom_update').val(infos.nom);	
+				// $('#prenom_update').val(infos.prenom);
+                // $('#mail_update').val(infos.mail);
+                // $('#pseudo_update').val(infos.pseudo);
+				$('#modalForm').modal('show');					
             }, 'json');	// fin de l'ajax
 });	
 

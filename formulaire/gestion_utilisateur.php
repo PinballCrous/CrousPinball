@@ -55,7 +55,7 @@ require_once('../templates/includes/css.php');
 
 <!--********************* Modal du formulaire d'Update *******************************************-->
 
-<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
       <div class="modal-dialog" role="document">
             <div class="modal-content">
