@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+//fichier javascript servant à la à l'affichage, la modification ou la suppression des utilisateurs par l'administrateur
 // AFFICHAGE DU TABLEAU DE utilisateurS ***************************************************************************************************
 
 function afficheutilisateur() {

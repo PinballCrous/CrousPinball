@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- page découverte  -->
 <head>
     <meta charset="UTF-8">
     <!-- <?php include '../templates/includes/css.php' ?> -->

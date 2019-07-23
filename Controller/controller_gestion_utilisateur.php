@@ -4,8 +4,8 @@ session_start();
 spl_autoload_register(function($classe){
   require_once '../Classe/'.$classe.'.class.php';
 });
-
-// **************** SERVICES POUR LES   utilisateurS ***************************************************************************
+//fichier de services il est utilisé pour l'ajax dans ce cas-ci (pour l'emsemble des modification possible dans l'interface administrateur)
+// **************** SERVICES POUR LES   utilisateur ***************************************************************************
 $managerutilisateur = new UtilisateurManager($bdd);
 
 // affichage

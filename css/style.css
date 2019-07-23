@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Hind');
 
-
+/*
+ édition des règle css pour la mise en page, les couleurs, ect... des élément présent sur la page du site web 
+*/
 *, *::before, *::after {
 	box-sizing: border-box;
 }

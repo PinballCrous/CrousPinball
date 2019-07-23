@@ -1,10 +1,11 @@
 <?php
-include '../bdd/connexionbdd.php';
-
+include '../bdd/connexionbdd.php'; // ajoute le fichier de connexion à la base de donnée
+// fichier de class manager (il gère toutes les fonctionalités en lien avec l'objet en question et la base de données)
 class UtilisateurManager{
     private $bdd;
 
     public function __construct($bdd){
+      //fonction de construction (la fonction qui est appellé lorsque l'on créer l'objet utilisateurManager)
         $this->setBDD($bdd);
     }
 
@@ -52,6 +53,7 @@ class UtilisateurManager{
   }   
 
   public function getListUtilisateur() {
+    //fonction qui retourne la liste des utilisateur présent dans la base de donnée
     // $utilisateur = [];
     // $q = $this->bdd->query('SELECT * FROM utilisateur ORDER BY utilisateur.id_utilisateur ASC;');
     // while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
@@ -62,6 +64,7 @@ class UtilisateurManager{
   }
 
     public function setBDD($bdd){
+      // fonction qui ajoute la connexion à la base de donné comme attribut au manager
         $this->bdd = $bdd;
     }
 

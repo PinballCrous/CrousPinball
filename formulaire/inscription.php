@@ -3,6 +3,7 @@
 <?php
 session_start();
 ?>
+<!-- fichier du formulaire d'incription des utilisateur -->
 <head>
     <meta charset="UTF-8">
     <?php include '../templates/includes/css.php'; ?>
@@ -14,6 +15,7 @@ session_start();
     <div class="fixed-top justify-content-end row mr-1">
         <a href="../formulaire/connexion.php" ><button type="button" class="btn text-white danger-color-dark">Connexion</button></a>
     </div>
+        <!-- contient tout les élémént servant à rentrer ses données utilisateur -->
         <h1 class="text-danger">PinballCrous</h1>
         <p>Inscrivez-vous pour sauvegarder vos scores!!</p>
         <div class="d-inline-block">
@@ -59,7 +61,10 @@ session_start();
 
 
 
-    <?php include '../templates/includes/js.php'; ?>
+    <?php
+    //fichier de services il est utilisé pour l'ajax dans ce cas-ci (pour l'emsemble des modification possible dans l'interface administrateur)
+
+     include '../templates/includes/js.php'; ?>
 </body>
 
 </html>

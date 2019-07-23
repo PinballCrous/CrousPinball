@@ -2,6 +2,7 @@
 session_start();
 require_once '../bdd/connexionbdd.php';
 require_once('../templates/includes/css.php');
+//fichier de l'interface de gestion administrateur (pour gérer les utilisateurs)
 // if (!isset($_SESSION['pseudo']) && empty($_SESSION['pseudo'])) {
 //    header('Location:connexion1.php');
 // } 
@@ -98,6 +99,7 @@ require_once('../templates/includes/css.php');
 <!--********************* Fin de Modal du formulaire d'Update *******************************************-->
 
 <?php
+    //ajout du fichier javascript permetant l'ouverture de la modal ainsi que la modification des information utilisateur en ajax
 	$js = ['gestion_utilisateur'];
     require_once('../templates/includes/js.php')
 ?>

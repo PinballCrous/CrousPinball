@@ -3,6 +3,7 @@
 <?php
 session_start();
 ?>
+<!-- page de formulaire de la connexion des utilisateur -->
 <head>
     <meta charset="UTF-8">
     <?php include '../templates/includes/css.php'; ?>
@@ -14,7 +15,7 @@ session_start();
     <div class="fixed-top justify-content-end row mr-1">
     <a href="../formulaire/inscription.php" ><button type="button" class="btn text-white danger-color-dark">Inscription</button></a>
     </div>
-    
+        <!-- éléments présents dans le formulaire (input servant à rentrer les informations) -->
         <h1 class="text-danger">PinballCrous</h1>
         <p>Connectez-vous !!</p>
         <div class="d-inline-block">
@@ -44,7 +45,8 @@ session_start();
 
 
 
-    <?php include '../templates/includes/js.php'; ?>
+    <?php //ajout d'un fichier faisant le lien avec tout les fichier javascript nécéssaires
+     include '../templates/includes/js.php'; ?>
 </body>
 
 </html>

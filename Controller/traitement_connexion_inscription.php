@@ -4,7 +4,10 @@ require_once '../bdd/connexionbdd.php';
 spl_autoload_register(function($class_name){
       include '../Classe/'.$class_name.'.class.php';
    });
+//fichier de controle de la connexion et d'inscription des utilisateur
 
+
+//gestion des informations pour la connexion
 if(isset($_POST['formconnexion'])) {
 
    //Récupération information du formulaire
@@ -41,8 +44,9 @@ if(isset($_POST['formconnexion'])) {
     }
 }
 
-
+//gestion des données pour l'inscription des utilisateurs
 if(isset($_POST['forminscription'])) {
+   //récupérations des informations que l'utilisateur rentre
    $mail = htmlspecialchars($_POST['mail']);
    $mail2 = htmlspecialchars($_POST['mail2']);
    $mdp = $_POST['mdp'];
@@ -53,16 +57,17 @@ if(isset($_POST['forminscription'])) {
    $prenom = htmlspecialchars($_POST['prenom']);
    $pseudo = htmlspecialchars($_POST['pseudo']);
 
-   echo $mail."<br>";
-   echo $mail2."<br>";
-   echo $mdp."<br>";
-   echo $mdp2."<br>";
-   echo $nom."<br>";  
-   echo $prenom."<br>";
-   echo $pseudo."<br>";
-   var_dump(file_exists("../Classe/Utilisateur.class.php"));
-   echo "<br>";
+   // echo $mail."<br>";
+   // echo $mail2."<br>";
+   // echo $mdp."<br>";
+   // echo $mdp2."<br>";
+   // echo $nom."<br>";  
+   // echo $prenom."<br>";
+   // echo $pseudo."<br>";
+   // var_dump(file_exists("../Classe/Utilisateur.class.php"));
+   // echo "<br>";
    
+   //vérification de la de la conformité des information
    if(!empty($_POST['pseudo']) && !empty($_POST['mail']) && !empty($_POST['mail2']) && !empty($_POST['mdp']) && !empty($_POST['mdp2'])) {
       $pseudolength = strlen($pseudo);
       if($pseudolength <= 255) {
@@ -78,11 +83,14 @@ if(isset($_POST['forminscription'])) {
                      for($i=1;$i<$longueurKey;$i++) {
                         $key .= mt_rand(0,9);
                      }
+                     //création du manager & de l'objet utilisateur 
                      $utilisateurManager = new UtilisateurManager($bdd);
                      $new_utilisateur = new Utilisateur( array('pseudo' => $pseudo,'nom' => $nom, 'prenom' =>  $prenom, 'mail' => $mail, 'mdp' => $mdph, 'role' => "user" ));
                      var_dump($new_utilisateur);
+                     //ajout de l'utilisateur dans la bdd
                      $utilisateurManager->add($new_utilisateur);
                      
+                     //partie servant l'envoie d'un mail et de la vérification de celui-ci pour plus de sécurité lors de l'inscription
                      // $header="MIME-Version: 1.0\r\n";
                      // $header.='From:"Viandedirect"<support@Viande-direct.com>'."\n";
                      // $header.='Content-Type:text/html; charset="uft-8"'."\n";
@@ -125,5 +133,4 @@ if(isset($_POST['forminscription'])) {
    }
 }
 
-echo "<br>coucou";
 ?>
