@@ -46,8 +46,9 @@ class UtilisateurManager{
   }      
 
   public function getUtilisateurbyId($id) {
-    $donnees = $this->bdd->query('SELECT * FROM utilisateur WHERE id_utilisateurteur ='.$id)->fetch(PDO::FETCH_ASSOC);
+    $donnees = $this->bdd->query('SELECT * FROM utilisateur WHERE id_utilisateur ='.$id)->fetch(PDO::FETCH_ASSOC);
     return new Utilisateur($donnees);
+    // return $donnees;
   }   
 
   public function getListUtilisateur() {
