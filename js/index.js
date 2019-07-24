@@ -106,12 +106,13 @@
 			path(239, 86, PATHS.DOME),
 
 			// pegs (left-most, left, mid, right, right-most)
-			wall(100, 140, 10, 40, COLOR.INNER, 0, 5),
-			wall(150, 140, 10, 40, COLOR.INNER, 0, 5),
-			wall(200, 140, 10, 40, COLOR.INNER, 0, 5),
-			wall(250, 140, 10, 40, COLOR.INNER, 0, 5),
-			wall(300, 140, 10, 40, COLOR.INNER, 0, 5),
-			wall(350, 140, 10, 40, COLOR.INNER, 0, 5),
+			// mur des lettre 
+			wallitle(100, 140, 10, 40, COLOR.INNER, 0, 5),
+			wallitle(150, 140, 10, 40, COLOR.INNER, 0, 5),
+			wallitle(200, 140, 10, 40, COLOR.INNER, 0, 5),
+			wallitle(250, 140, 10, 40, COLOR.INNER, 0, 5),
+			wallitle(300, 140, 10, 40, COLOR.INNER, 0, 5),
+			wallitle(350, 140, 10, 40, COLOR.INNER, 0, 5),
 
 			// top bumpers (left, right)
 			bumper(105, 250),
@@ -122,25 +123,29 @@
 			bumper(285, 340),
 
 			// shooter lane wall
+			// mur gauche ou la balle est lancé
 			wall(440, 520, 20, 530, COLOR.OUTER),
 
 			
 
 			// slingshots (left, right)
-			wall(75, 510, 10, 115, COLOR.INNER, 0, 06),
-			wall(375, 510, 10, 115, COLOR.INNER,  0, 06),
+			// petit mur verticale droite et gauche
+			wallmoyen(75, 510, 10, 115, COLOR.INNER, 0, 06),
+			wallmoyen(375, 510, 10, 115, COLOR.INNER,  0, 06),
 
 			// out lane walls (left, right)
-			wall(29, 511, 15, 155, COLOR.INNER,  0, 08),
-			wall(422, 511, 15, 155, COLOR.INNER,  0, 08),
+			// gros mur verticale droite et gauche
+			wallbig(29, 511, 15, 155, COLOR.INNER,  0, 08),
+			wallbig(422, 511, 15, 155, COLOR.INNER,  0, 08),
 
-			// petit mur qui suit le chemin lol
+			// petit murs inclinée droite et gauche
 			wall(110, 587, 10, 90, COLOR.INNER, -0.96, 06),
 			wall(340, 587, 10, 90, COLOR.INNER, 0.96, 06),
 
 			// flipper walls (left, right);
-			wall(82, 618, 15, 147, COLOR.INNER, -0.96, 08),
-			wall(368, 618, 15, 147, COLOR.INNER, 0.96, 08),
+			//grand murs droite et gauche inclinées
+			wallmoyenbig(82, 618, 15, 147, COLOR.INNER, -0.96, 08),
+			wallmoyenbig(368, 618, 15, 147, COLOR.INNER, 0.96, 08),
 			
 			// aprons (left, right)
 			path(79, 740, PATHS.APRON_LEFT),
@@ -515,6 +520,55 @@
 			isStatic: true,
 			render: {
 				fillStyle: COLOR.OUTER
+			}
+		});
+	}
+
+	// wall segments
+	function wallitle(x, y, width, height, color, angle = 0, border = 10) {
+		return Matter.Bodies.rectangle(x, y, width, height, {
+			angle: angle,
+			isStatic: true,
+			chamfer: { radius: border },
+			render: {
+				fillStyle: color
+			}
+		});
+	}
+
+	// wall segments
+	function wallmoyen(x, y, width, height, color, angle = 0, border = 10) {
+		return Matter.Bodies.rectangle(x, y, width, height, {
+			angle: angle,
+			isStatic: true,
+			chamfer: { radius: border },
+			render: {
+				fillStyle: color
+			}
+		});
+	}
+
+	// wall segments
+	function wallbig(x, y, width, height, color, angle = 0, border = 10) {
+		return Matter.Bodies.rectangle(x, y, width, height, {
+			angle: angle,
+			isStatic: true,
+			chamfer: { radius: border },
+			render: {
+				fillStyle: color
+			}
+		});
+	}
+
+
+	// wall segments
+	function wallmoyenbig(x, y, width, height, color, angle = 0, border = 10) {
+		return Matter.Bodies.rectangle(x, y, width, height, {
+			angle: angle,
+			isStatic: true,
+			chamfer: { radius: border },
+			render: {
+				fillStyle: color
 			}
 		});
 	}
