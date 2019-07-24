@@ -556,7 +556,7 @@
 				chamfer: { radius: border }, 
 				render: { 
 					sprite:{ 
-						texture: '../img/wall.jpg' 
+						texture: '../img/Brigitte.jpg' 
 					} 
 				} 
 			}); 
