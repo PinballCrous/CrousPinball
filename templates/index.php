@@ -37,11 +37,10 @@ session_start();
                 <a href="../decouverte/gamedecouverte.php"><button type="button" class="btn text-white danger-color-dark">Jouer une partie simple</button></a>
                 <a href="../defis/indexDefis.php"><button type="button" class="btn text-white danger-color-dark">Jouer une partie à thème</button></a>
             </div>
+            <div class="d-inline-block">
+                <a href="regle_presentation.php"><button type="button" class="btn text-white danger-color-dark">Règles & Présentation</button></a>
+            </div>
         </div>
     </main>
-
-
-
-    <?php include_once 'includes/js.php'; ?>
 </body>
 </html>
