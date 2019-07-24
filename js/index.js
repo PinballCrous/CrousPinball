@@ -128,7 +128,7 @@
 
 			// slingshots (left, right)
 			wall(75, 510, 10, 115, COLOR.INNER, 0, 06),
-			wall(380, 510, 10, 115, COLOR.INNER,  0, 06),
+			wall(375, 510, 10, 115, COLOR.INNER,  0, 06),
 
 			// out lane walls (left, right)
 			wall(29, 511, 15, 155, COLOR.INNER,  0, 08),
@@ -136,11 +136,11 @@
 
 			// petit mur qui suit le chemin lol
 			wall(110, 587, 10, 90, COLOR.INNER, -0.96, 06),
-			wall(347, 587, 10, 90, COLOR.INNER, 0.96, 06),
+			wall(340, 587, 10, 90, COLOR.INNER, 0.96, 06),
 
 			// flipper walls (left, right);
 			wall(82, 618, 15, 147, COLOR.INNER, -0.96, 08),
-			wall(367, 618, 15, 147, COLOR.INNER, 0.96, 08),
+			wall(368, 618, 15, 147, COLOR.INNER, 0.96, 08),
 			
 			// aprons (left, right)
 			path(79, 740, PATHS.APRON_LEFT),
