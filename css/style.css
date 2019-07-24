@@ -106,7 +106,7 @@ canvas {
 	overflow: hidden;
 	border-radius: 5px;
 	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.75);
-	background-image: url('../img/background-flipper.png');
+	background-image: url('../img/herbe.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -269,6 +269,23 @@ canvas {
     line-height: 1.5;
     text-align: center;
 }
+
+.loader-container {
+	position: fixed;
+    width: 100vw;
+	height: 100vh;
+	z-index: 99999;
+    background-color: #9e9e9e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+}
+
+
 
 /* responsive scaling, because pinball tables are tall */
 @media (min-height: 0px) {

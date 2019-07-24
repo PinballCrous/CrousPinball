@@ -124,21 +124,23 @@
 			// shooter lane wall
 			wall(440, 520, 20, 530, COLOR.OUTER),
 
-			// drops (left, right)
-			path(25, 360, PATHS.DROP_LEFT),
-			path(425, 360, PATHS.DROP_RIGHT),
+			
 
 			// slingshots (left, right)
-			wall(115, 510, 20, 120, COLOR.INNER),
-			wall(345, 510, 20, 120, COLOR.INNER),
+			wall(75, 510, 10, 115, COLOR.INNER, 0, 06),
+			wall(380, 510, 10, 115, COLOR.INNER,  0, 06),
 
 			// out lane walls (left, right)
-			wall(35, 511, 20, 160, COLOR.INNER),
-			wall(415, 511, 20, 160, COLOR.INNER),
+			wall(29, 511, 15, 155, COLOR.INNER,  0, 08),
+			wall(422, 511, 15, 155, COLOR.INNER,  0, 08),
+
+			// petit mur qui suit le chemin lol
+			wall(110, 587, 10, 90, COLOR.INNER, -0.96, 06),
+			wall(347, 587, 10, 90, COLOR.INNER, 0.96, 06),
 
 			// flipper walls (left, right);
-			wall(90, 624, 20, 145, COLOR.INNER, -0.96),
-			wall(360, 624, 20, 145, COLOR.INNER, 0.96),
+			wall(82, 618, 15, 147, COLOR.INNER, -0.96, 08),
+			wall(367, 618, 15, 147, COLOR.INNER, 0.96, 08),
 			
 			// aprons (left, right)
 			path(79, 740, PATHS.APRON_LEFT),
@@ -386,15 +388,15 @@
 		});
 
 		// mouse drag (god mode for grabbing pinball)
-		// Matter.World.add(world, Matter.MouseConstraint.create(engine, {
-		// 	mouse: Matter.Mouse.create(render.canvas),
-		// 	constraint: {
-		// 		stiffness: 0.2,
-		// 		render: {
-		// 			visible: false
-		// 		}
-		// 	}
-		// }));
+		Matter.World.add(world, Matter.MouseConstraint.create(engine, {
+			mouse: Matter.Mouse.create(render.canvas),
+			constraint: {
+				stiffness: 0.2,
+				render: {
+					visible: false
+				}
+			}
+		}));
 
 		
 		// keyboard paddle events
@@ -550,7 +552,9 @@
 			label: 'bumper',
 			isStatic: true,
 			render: {
-				fillStyle: COLOR.BUMPER
+				sprite:{
+					texture: '../img/bumper.png'
+				}
 			}
 		});
 
