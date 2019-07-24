@@ -9,7 +9,7 @@ class UtilisateurManager{
         $this->setBDD($bdd);
     }
 
-    public function add(utilisateur $utilisateur) {
+    public function add(Utilisateur $utilisateur) {
     // Préparation de la requête d'insertion. Assignation des valeurs. Exécution de la requête.
         $add_utilisateur = $this->bdd->prepare('INSERT INTO utilisateur(pseudo, prenom, nom, mail, mdp, role, crous ) VALUES(:pseudo, :prenom, :nom, :mail, :mdp, :role, :crous);');
         $add_utilisateur->bindValue(':pseudo', $utilisateur->getPseudo(), PDO::PARAM_STR);    
@@ -43,7 +43,7 @@ class UtilisateurManager{
       $update_utilisateur->execute();
       $update_utilisateur->closeCursor();
       return ($update_utilisateur->rowCount());
-} 
+  } 
 
   public function delete(Utilisateur $utilisateur) {
   // Exécute une requête de type DELETE
