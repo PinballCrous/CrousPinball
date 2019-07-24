@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- <?php include '../templates/includes/css.php' ?> -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_defi_1.css">
     <title>Pinball CROUS</title>
 </head>
 
