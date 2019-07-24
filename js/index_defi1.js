@@ -129,22 +129,28 @@
 			path(25, 360, PATHS.DROP_LEFT),
 			path(425, 360, PATHS.DROP_RIGHT),
 
+			// slingshots (left, right)
 			// petit mur verticale droite et gauche 
 			wallmoyen(115, 510, 20, 120, COLOR.INNER),
 			wallmoyen(345, 510, 20, 120, COLOR.INNER),
 
+			// out lane walls (left, right)
 			// gros mur verticale droite et gauche 
 			wallbig(35, 511, 20, 160, COLOR.INNER),
 			wallbig(415, 511, 20, 160, COLOR.INNER),
 
 			// flipper walls (left, right);
-			//grand murs droite et gauche inclinées 
+			//grand murs droite et gauche inclinées
 			wallmoyenbig(90, 624, 20, 145, COLOR.INNER, -0.96),
 			wallmoyenbig(360, 624, 20, 145, COLOR.INNER, 0.96),
-			wallmoyenbig(390, 280, 12, 99, COLOR.BUMPER, 1.10),
-			wallmoyenbig(65, 280, 12, 99, COLOR.BUMPER, -1.10),
-			wallmoyenbig(137, 445, 15, 70, COLOR.INNER, 1.10),
-			wallmoyenbig(323, 445, 15, 70, COLOR.INNER, -1.10),
+			
+			//murs pour gener a coté du bumper
+			wallitlemoyen(390, 280, 12, 99, COLOR.BUMPER, 1.10),
+			wallitlemoyen(65, 280, 12, 99, COLOR.BUMPER, -1.10),
+
+			//murs pour gener a coté des paddles
+			wallitlemoyen(137, 445, 15, 70, COLOR.INNER, 1.10),
+			wallitlemoyen(323, 445, 15, 70, COLOR.INNER, -1.10),
 
 			// aprons (left, right)
 			path(79, 740, PATHS.APRON_LEFT),
@@ -541,6 +547,20 @@
 			} 
 		}); 
 	} 
+
+		// wall segments 
+		function wallitlemoyen(x, y, width, height, color, angle = 0, border = 10) { 
+			return Matter.Bodies.rectangle(x, y, width, height, { 
+				angle: angle, 
+				isStatic: true, 
+				chamfer: { radius: border }, 
+				render: { 
+					sprite:{ 
+						texture: '../img/wall.jpg' 
+					} 
+				} 
+			}); 
+		} 
  
 	// wall segments 
 	function wallmoyen(x, y, width, height, color, angle = 0, border = 10) { 
