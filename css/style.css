@@ -270,6 +270,23 @@ canvas {
     text-align: center;
 }
 
+.loader-container {
+	position: fixed;
+    width: 100vw;
+	height: 100vh;
+	z-index: 99999;
+    background-color: #9e9e9e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+}
+
+
+
 /* responsive scaling, because pinball tables are tall */
 @media (min-height: 0px) {
 	.container { -webkit-transform: scale(0.25); transform: scale(0.25); }

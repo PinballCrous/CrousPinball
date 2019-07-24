@@ -3,13 +3,16 @@
 <!-- page découverte  -->
 <head>
     <meta charset="UTF-8">
-    <!-- <?php include '../templates/includes/css.php' ?> -->
+    <?php include '../templates/includes/css.php' ?> 
     <link rel="stylesheet" href="../css/style.css">
     <title>Pinball CROUS</title>
 </head>
 
 <body>
     <main>
+            <div class="loader-container">
+                <div class="loader"><img src="../img/loader.png" alt=""></div>
+            </div>
 
             <div onload="chronoStart()">
 
@@ -70,6 +73,7 @@
                 <script src='https://cdn.rawgit.com/schteppe/poly-decomp.js/1ef946f1/build/decomp.min.js'></script>
                 <script src='https://cdn.rawgit.com/liabru/matter-js/0895d81f/build/matter.min.js'></script>
                 <script src='https://cdn.rawgit.com/liabru/matter-attractors/c470ed42/build/matter-attractors.min.js'></script>
+                <script src="../js/loader.js"></script>
 
 
 

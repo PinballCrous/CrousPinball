@@ -11,6 +11,10 @@
 <body>
     <main>
 
+            <div class="loader-container">
+                <div class="loader"><img src="../img/loader.png" alt=""></div>
+            </div>
+
             <div onload="chronoStart()">
 
                 <div class="container">
@@ -71,6 +75,7 @@
                 <script src='https://cdn.rawgit.com/liabru/matter-js/0895d81f/build/matter.min.js'></script>
                 <script src='https://cdn.rawgit.com/liabru/matter-attractors/c470ed42/build/matter-attractors.min.js'></script>
                 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                <script src="../js/loader.js"></script>
 
 
 
