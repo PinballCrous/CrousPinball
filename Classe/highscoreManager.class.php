@@ -22,7 +22,7 @@ class HighscoreManager{
     public function updatehighscore(Highscore $highscore) {
     // Prépare une requête de type UPDATE.
         $update_highscore = $this->bdd->prepare('UPDATE highscore SET date = :date, score = :score WHERE id_highscore='.$highscore->getId_highscore());    
-        $update_highscore->bindValue(':pseudo', $highscore->getDate(), PDO::PARAM_STR);
+        $update_highscore->bindValue(':date', $highscore->getDate(), PDO::PARAM_STR);
         $update_highscore->bindValue(':score', $highscore->getScore(), PDO::PARAM_STR);
         $update_highscore->execute();
         $update_highscore->closeCursor();
