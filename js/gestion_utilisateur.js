@@ -17,6 +17,7 @@ function afficheutilisateur() {
                             tab += '<td>'+utilisateur.mail+'</td>';
                             tab += '<td>'+utilisateur.pseudo+'</td>';
                             tab += '<td>'+utilisateur.role+'</td>';
+                            tab += '<td>'+utilisateur.score+'</td>';
                             tab += '<td><i id='+utilisateur.id_utilisateur+' class="modifier fas fa-pen red-text"></i></td>';     
                             tab += '<td><i id='+utilisateur.id_utilisateur+' class="effacer fas fa-times red-text"></i></td>';                                
                             tab += '</tr>';
