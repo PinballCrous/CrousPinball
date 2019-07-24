@@ -532,7 +532,7 @@
 			chamfer: { radius: border },
 			render: {
 				sprite:{
-					texture: '../img/walllitle.jpg'
+					texture: '../img/walllitle.png'
 				}
 			}
 		});
@@ -546,7 +546,7 @@
 			chamfer: { radius: border },
 			render: {
 				sprite:{
-					texture: '../img/wallmoyen.jpg'
+					texture: '../img/wallmoyen.png'
 				}
 			}
 		});
@@ -560,7 +560,7 @@
 			chamfer: { radius: border },
 			render: {
 				sprite:{
-					texture: '../img/wallbig.jpg'
+					texture: '../img/wallbig.png'
 				}
 			}
 		});
@@ -575,7 +575,7 @@
 			chamfer: { radius: border },
 			render: {
 				sprite:{
-					texture: '../img/wallmoyenbig.jpg'
+					texture: '../img/wallmoyenbig.png'
 				}
 			}
 		});
@@ -589,7 +589,7 @@
 			chamfer: { radius: border },
 			render: {
 				sprite:{
-					texture: '../img/wall.jpg'
+					texture: '../img/wall.png'
 				}
 			}
 		});
