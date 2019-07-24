@@ -37,6 +37,40 @@ session_start();
                     <input type="email" class="form-control" id="mail2" name="mail2" placeholder="Confirmer votre email">
                 </div>
                 <div class="form-group">
+                    <label for="crous">Votre Crous</label>
+                    <select name="crous" id="crous">
+                        <option value="--">--</option>
+                        <option value="Aix-Marseille">Aix-Marseille</option>
+                        <option value="Amiens">Amiens</option>
+                        <option value="Antilles-Guyane">Antilles-Guyane</option>
+                        <option value="Besançon">Besançon</option>
+                        <option value="Bordeaux">Bordeaux</option>
+                        <option value="Caen">Caen</option>
+                        <option value="Clermont-Ferrand">Clermont-Ferrand</option>
+                        <option value="Corse">Corse</option>
+                        <option value="Créteil">Créteil</option>
+                        <option value="Dijon">Dijon</option>
+                        <option value="Grenoble">Grenoble</option>
+                        <option value="Lilles">Lilles</option>
+                        <option value="Limoges">Limoges</option>
+                        <option value="Lyon-Saint-Etienne">Lyon-Saint-Etienne</option>
+                        <option value="Montpellier">Montpellier</option>
+                        <option value="Nancy-Metz">Nancy-Metz</option>
+                        <option value="Nantes">Nantes</option>
+                        <option value="Nice-Toulon">Nice-Toulon</option>
+                        <option value="Orléans-Tours">Orléans-Tours</option>
+                        <option value="Paris">Paris</option>
+                        <option value="Poitiers">Poitiers</option>
+                        <option value="Reims">Reims</option>
+                        <option value="Rennes">Rennes</option>
+                        <option value="La Réunion">La Réunion</option>
+                        <option value="Rouen">Rouen</option>
+                        <option value="Strasbourg">Strasbourg</option>
+                        <option value="Toulouse">Toulouse</option>
+                        <option value="Versailles">Versailles</option>
+                    </select>
+                </div>
+                <div class="form-group">
                     <input type="password" class="form-control" id="mdp" name="mdp" aria-describedby="passwordHelp" placeholder="Mot de passe">
                     <small id="passwordHelp" class="form-text text-muted">Ne partagez votre mot de passe avec aucun tier.</small>
                 </div>

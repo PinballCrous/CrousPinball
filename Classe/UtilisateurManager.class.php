@@ -11,13 +11,14 @@ class UtilisateurManager{
 
     public function add(utilisateur $utilisateur) {
     // Préparation de la requête d'insertion. Assignation des valeurs. Exécution de la requête.
-        $add_utilisateur = $this->bdd->prepare('INSERT INTO utilisateur(pseudo, prenom, nom, mail, mdp, role ) VALUES(:pseudo, :prenom, :nom, :mail, :mdp, :role);');
+        $add_utilisateur = $this->bdd->prepare('INSERT INTO utilisateur(pseudo, prenom, nom, mail, mdp, role, crous ) VALUES(:pseudo, :prenom, :nom, :mail, :mdp, :role, :crous);');
         $add_utilisateur->bindValue(':pseudo', $utilisateur->getPseudo(), PDO::PARAM_STR);    
 	      $add_utilisateur->bindValue(':prenom', $utilisateur->getPrenom(), PDO::PARAM_STR);
         $add_utilisateur->bindValue(':nom', $utilisateur->getNom(), PDO::PARAM_STR);  
         $add_utilisateur->bindValue(':mail', $utilisateur->getMail(), PDO::PARAM_STR);
         $add_utilisateur->bindValue(':mdp', $utilisateur->getMdp(), PDO::PARAM_STR); 
         $add_utilisateur->bindValue(':role', $utilisateur->getRole(), PDO::PARAM_STR);
+        $add_utilisateur->bindValue(':crous', $utilisateur->getCrous(), PDO::PARAM-STR);
         echo "<br>".$utilisateur->getPseudo();
         echo "<br>".$utilisateur->getNom();
         echo "<br>".$utilisateur->getPrenom();
@@ -31,9 +32,14 @@ class UtilisateurManager{
 
   public function updateUtilisateur(Utilisateur $utilisateur) {
   // Prépare une requête de type UPDATE.
-      $update_utilisateur = $this->bdd->prepare('UPDATE utilisateur SET prenom = :prenom, nom = :nom WHERE id_utilisateur='.$utilisateur->getId_utilisateur());    
+      $update_utilisateur = $this->bdd->prepare('UPDATE utilisateur SET pseudo = :pseudo, nom = :nom, prenom = : prenom, mail = :mail, mdp = :mdp, role = :role, crous = :crous WHERE id_utilisateur='.$utilisateur->getId_utilisateur());    
+      $update_utilisateur->bindValue(':pseudo', $utilisateur->getPseudo(), PDO::PARAM_STR);
+      $update_utilisateur->bindValue(':nom', $utilisateur->getNom(), PDO::PARAM_STR);
       $update_utilisateur->bindValue(':prenom', $utilisateur->getPrenom(), PDO::PARAM_STR);
-      $update_utilisateur->bindValue(':nom', $utilisateur->getNom(), PDO::PARAM_STR);      
+      $update_utilisateur->bindValue(':mail', $utilisateur->getMail(), PDO::PARAM_STR);
+      $update_utilisateur->bindValue(':mdp', $utilisateur->getMdp(), PDO::PARAM_STR);  
+      $update_utilisateur->bindValue(':crous', $utilisateur->getCrous(), PDO::PARAM_STR);
+      $update_utilisateur->bindValue(':role', $utilisateur->getRole(), PDO::PARAM_STR); 
       $update_utilisateur->execute();
       $update_utilisateur->closeCursor();
       return ($update_utilisateur->rowCount());

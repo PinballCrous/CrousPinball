@@ -21,7 +21,8 @@ session_start();
             <div class="justify-content-center">
                 <h2 class="text-danger">Règles du jeu</h2>
                 <div class="row">
-                    <div class="col-6">
+                <div class="col-1"></div>
+                    <div class="col-5">
                         <img src="../img/regledujeu.PNG" alt="Image explicative des règle du Pinball">
                     </div>
                     <div class="col-6">

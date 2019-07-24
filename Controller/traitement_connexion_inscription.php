@@ -56,6 +56,7 @@ if(isset($_POST['forminscription'])) {
    $nom = htmlspecialchars($_POST['nom']);
    $prenom = htmlspecialchars($_POST['prenom']);
    $pseudo = htmlspecialchars($_POST['pseudo']);
+   $crous = $_POST['crous'];
 
    // echo $mail."<br>";
    // echo $mail2."<br>";
@@ -85,7 +86,7 @@ if(isset($_POST['forminscription'])) {
                      }
                      //création du manager & de l'objet utilisateur 
                      $utilisateurManager = new UtilisateurManager($bdd);
-                     $new_utilisateur = new Utilisateur( array('pseudo' => $pseudo,'nom' => $nom, 'prenom' =>  $prenom, 'mail' => $mail, 'mdp' => $mdph, 'role' => "user" ));
+                     $new_utilisateur = new Utilisateur( array('pseudo' => $pseudo,'nom' => $nom, 'prenom' =>  $prenom, 'mail' => $mail, 'mdp' => $mdph, 'role' => "user", "crous" => $crous ));
                      var_dump($new_utilisateur);
                      //ajout de l'utilisateur dans la bdd
                      $utilisateurManager->add($new_utilisateur);

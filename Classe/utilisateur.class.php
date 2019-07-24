@@ -9,6 +9,7 @@ class Utilisateur{
     private $mail;
     private $mdp;
     private $role;
+    private $crous;
     private $id_highscore;
 
     //fonction de construction (la fonction qui est appellé lorsque l'on créer l'objet utilisateur)
@@ -49,6 +50,9 @@ class Utilisateur{
     public function setRole($role){
         $this->role = $role;
     }
+    public function setCrous($crous){
+        $this->crous = $crous;
+    }
     public function setId_highscore($id_highscore){
         if (is_numeric($id_highscore)) {
             $this->id_highscore = $id_highscore;
@@ -63,6 +67,7 @@ class Utilisateur{
     public function getMail(){return $this->mail;}
     public function getMdp(){return $this->mdp;}
     public function getRole(){return $this->role;}
+    public function getCrous(){return $this->crous;}
     public function getHighscore(){return $this->highscore;}
 
 }
