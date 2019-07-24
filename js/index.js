@@ -139,8 +139,8 @@
 			wallbig(422, 511, 15, 155, COLOR.INNER,  0, 08),
 
 			// petit murs inclinée droite et gauche
-			wall(110, 587, 10, 90, COLOR.INNER, -0.96, 06),
-			wall(340, 587, 10, 90, COLOR.INNER, 0.96, 06),
+			wallitlemoyen(110, 587, 10, 90, COLOR.INNER, -0.96, 06),
+			wallitlemoyen(340, 587, 10, 90, COLOR.INNER, 0.96, 06),
 
 			// flipper walls (left, right);
 			//grand murs droite et gauche inclinées
@@ -531,7 +531,9 @@
 			isStatic: true,
 			chamfer: { radius: border },
 			render: {
-				fillStyle: color
+				sprite:{
+					texture: '../img/walllitle.jpg'
+				}
 			}
 		});
 	}
@@ -543,7 +545,9 @@
 			isStatic: true,
 			chamfer: { radius: border },
 			render: {
-				fillStyle: color
+				sprite:{
+					texture: '../img/wallmoyen.jpg'
+				}
 			}
 		});
 	}
@@ -555,7 +559,9 @@
 			isStatic: true,
 			chamfer: { radius: border },
 			render: {
-				fillStyle: color
+				sprite:{
+					texture: '../img/wallbig.jpg'
+				}
 			}
 		});
 	}
@@ -568,7 +574,23 @@
 			isStatic: true,
 			chamfer: { radius: border },
 			render: {
-				fillStyle: color
+				sprite:{
+					texture: '../img/wallmoyenbig.jpg'
+				}
+			}
+		});
+	}
+
+	// wall segments
+	function wallitlemoyen(x, y, width, height, color, angle = 0, border = 10) {
+		return Matter.Bodies.rectangle(x, y, width, height, {
+			angle: angle,
+			isStatic: true,
+			chamfer: { radius: border },
+			render: {
+				sprite:{
+					texture: '../img/wall.jpg'
+				}
 			}
 		});
 	}
