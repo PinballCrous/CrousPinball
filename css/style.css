@@ -106,7 +106,7 @@ canvas {
 	overflow: hidden;
 	border-radius: 5px;
 	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.75);
-	background-image: url('../img/background-flipper.png');
+	background-image: url('../img/herbe.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
