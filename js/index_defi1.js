@@ -560,7 +560,9 @@
 			label: 'bumper',
 			isStatic: true,
 			render: {
-				fillStyle: COLOR.BUMPER
+				sprite:{
+					texture: '../img/donut.png'
+				}
 			}
 		});
 
