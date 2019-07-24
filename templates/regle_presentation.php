@@ -19,13 +19,13 @@ session_start();
             <p>Bienvenue sur le FlipperCrous ici vous trouverez un jeu ludique pour mieux connaitre le crous</p>
 
             <div class="justify-content-center">
-                <h2 class="text-danger">Règles du jeu</h2>
                 <div class="row">
                 <div class="col-1"></div>
                     <div class="col-5">
                         <img src="../img/regledujeu.PNG" alt="Image explicative des règle du Pinball">
                     </div>
                     <div class="col-6">
+                    <h2 class="text-danger">Règles du jeu</h2>
                         <p>Les règles du jeu sont très simples :<p>
                         <p> Envoyez la balle dans le plateau <strong> touchez les bumpers pour marquer les plus de point possible et essayez de garder la balle dans le plateeau le plus longtemps possible</p>
                         <p>Si vous jouer sur mobile ou tablette (ou tout autre appareil tactile) il vous suffit d'appuyez sur <strong>Go!</strong> pour lancer une partie et d'appuyez sur <strong>Tap!</strong>pour bouger les paddles</p>

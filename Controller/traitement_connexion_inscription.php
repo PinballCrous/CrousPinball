@@ -19,7 +19,7 @@ if(isset($_POST['formconnexion'])) {
    //lecture dans la bdd (table correspondant à la catégorie) du mdp qui correspond au mail entrez dans le formulaire
    if(!empty($mailconnect)&&!empty($mdpconnect)){  
 
-      $req = $bdd->query('SELECT mdp,id_utilisateur ,pseudo, role FROM utilisateur WHERE mail = "'.$mailconnect.'"')->fetch(PDO::FETCH_ASSOC);
+      $req = $bdd->query('SELECT * FROM utilisateur join highscore on id_utilisateur = highscore.id_highscore WHERE utilisateur.mail = "'.$mailconnect.'"')->fetch(PDO::FETCH_ASSOC);
       var_dump($req);
       if(password_verify($mdpconnect,$req['mdp'])){
          //initialisation session
@@ -30,8 +30,7 @@ if(isset($_POST['formconnexion'])) {
          $_SESSION['pseudo'] = $req['pseudo'];
          $_SESSION['mail'] = $mailconnect;
          $_SESSION['role'] = $req['role'];
-         // echo $_SESSION['role'];
-         // echo $_SESSION['pseudo'];
+         $_SESSION['highscore'] = $req['score'];
          header('Location:../templates/index.php');
       }else{
           $_SESSION['erreur'] = "Mauvais mail ou mot de passe !";
