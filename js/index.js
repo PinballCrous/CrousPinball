@@ -50,6 +50,7 @@
 		createPaddles();
 		createPinball();
 		createEvents();
+		createsecondEvents();
 
 	}
 
@@ -277,8 +278,8 @@
 	function createnewPinball() {
 
 		// x/y are set to when pinball is launched
-		pinball = Matter.Bodies.circle(465, 765, 14, {
-			label: 'pinball',
+		pinball1 = Matter.Bodies.circle(465, 765, 14, {
+			label: 'pinball1',
 			collisionFilter: {
 				group: stopperGroup
 			},
@@ -291,7 +292,7 @@
 				
 			
 		});
-		Matter.World.add(world, pinball);
+		Matter.World.add(world, pinball1);
 	}
 
 
@@ -301,34 +302,35 @@
 			let pairs = event.pairs;
 			pairs.forEach(function(pair) {
 				if (pair.bodyB.label === 'pinball') {
-					switch (pair.bodyA.label) {
-						case 'reset':
-							resetPinball();
-							levelCurrent = 1;
-							updateLevel(1);
-							$('#c').css("color", "");
-							$('#cent').addClass("hidden");
-							$('#r').css("color", "");
-							$('#regi').addClass("hidden");
-							$('#o').css("color", "");
-							$('#oeuv').addClass("hidden");
-							$('#u').css("color", "");
-							$('#univ').addClass("hidden");
-							$('#s').css("color", "");
-							$('#scol').addClass("hidden");
-							shownc = false;
-							shownr = false;
-							showno = false;
-							shownu = false;
-							showns = false;
-							break;
-						case 'bumper':
-							pingBumper(pair.bodyA);
-							break;
+						switch (pair.bodyA.label) {
+							case 'reset':
+								resetPinball();
+								levelCurrent = 1;
+								updateLevel(1);
+								$('#c').css("color", "");
+								$('#cent').addClass("hidden");
+								$('#r').css("color", "");
+								$('#regi').addClass("hidden");
+								$('#o').css("color", "");
+								$('#oeuv').addClass("hidden");
+								$('#u').css("color", "");
+								$('#univ').addClass("hidden");
+								$('#s').css("color", "");
+								$('#scol').addClass("hidden");
+								shownc = false;
+								shownr = false;
+								showno = false;
+								shownu = false;
+								showns = false;
+								break;
+							case 'bumper':
+								pingBumper(pair.bodyA);
+								break;
 					}
 				}
 			});
 		});
+
 
 		// regulate pinball
 		Matter.Events.on(engine, 'beforeUpdate', function(event) {
@@ -486,14 +488,13 @@
 	}
 
 	function launchnewPinball() {
-		isReset = false;
-		Matter.Body.setStatic(pinball, false);
-		Matter.Body.setPosition(pinball, { x: 465, y: 765 });
-		Matter.Body.setVelocity(pinball, { x: 0, y: -25 + rand(-2, 2) });
-		Matter.Body.setAngularVelocity(pinball, 0);
+		isDelete = false;
+		Matter.Body.setStatic(pinball1, false);
+		Matter.Body.setPosition(pinball1, { x: 465, y: 765 });
+		Matter.Body.setVelocity(pinball1, { x: 0, y: -25 + rand(-2, 2) });
+		Matter.Body.setAngularVelocity(pinball1, 0);
 
 	}
-	
  
 	function resetPinball() {
 		isReset = true;
