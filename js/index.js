@@ -505,7 +505,7 @@
 		updateScore(currentScore + 10);
 
 		// flash color
-		bumper.render.sprite.texture = '../img/ball.png';
+		bumper.render.sprite.texture = '../img/bumper1.png';
 		setTimeout(function() {
 			bumper.render.sprite.texture ='../img/bumper.png';
 		}, 100);
