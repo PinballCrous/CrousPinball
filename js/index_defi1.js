@@ -146,11 +146,11 @@
 			
 			//murs pour gener a coté du bumper
 			wallitlemoyen(390, 280, 12, 99, COLOR.BUMPER, 1.10),
-			wallitlemoyen(65, 280, 12, 99, COLOR.BUMPER, -1.10),
+			wallitlemoyen2(65, 280, 12, 99, COLOR.BUMPER, -1.10),
 
 			//murs pour gener a coté des paddles
 			wallitlemoyen(137, 445, 15, 70, COLOR.INNER, 1.10),
-			wallitlemoyen(323, 445, 15, 70, COLOR.INNER, -1.10),
+			wallitlemoyen2(323, 445, 15, 70, COLOR.INNER, -1.10),
 
 			// aprons (left, right)
 			path(79, 740, PATHS.APRON_LEFT),
@@ -557,6 +557,20 @@
 				render: { 
 					sprite:{ 
 						texture: '../img/brigitteultime.png' 
+					} 
+				} 
+			}); 
+		} 
+
+		// wall segments 
+		function wallitlemoyen2(x, y, width, height, color, angle = 0, border = 10) { 
+			return Matter.Bodies.rectangle(x, y, width, height, { 
+				angle: angle, 
+				isStatic: true, 
+				chamfer: { radius: border }, 
+				render: { 
+					sprite:{ 
+						texture: '../img/brigitteultime2.png' 
 					} 
 				} 
 			}); 
