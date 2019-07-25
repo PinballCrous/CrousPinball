@@ -274,6 +274,7 @@
 		updateLevel(1);
 	}
 
+
 	function createEvents() {
 		// events for when the pinball hits stuff
 		Matter.Events.on(engine, 'collisionStart', function(event) {
@@ -488,6 +489,8 @@
 		if (currentScore%500 == 0 && currentScore != 0) {
 			levelCurrent++;
 			updateLevel(levelCurrent);
+			createPinball();
+			launchPinball();
 		}
 		highScore = Math.max(currentScore, highScore);
 		$highScore.text(highScore);
