@@ -556,7 +556,7 @@
 				chamfer: { radius: border }, 
 				render: { 
 					sprite:{ 
-						texture: '../img/Brigitte.jpg' 
+						texture: '../img/brigitteultime.png' 
 					} 
 				} 
 			}); 
