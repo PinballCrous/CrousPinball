@@ -642,7 +642,9 @@
 			isStatic: true, 
 			chamfer: { radius: border }, 
 			render: { 
-				fillStyle: color 
+				sprite:{ 
+					texture: '../img/saucisse1.png' 
+				} 
 			} 
 		}); 
 	} 
