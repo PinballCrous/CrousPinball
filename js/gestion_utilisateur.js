@@ -8,7 +8,6 @@ function afficheutilisateur() {
             function (utilisateurs) { 
                 if(utilisateurs.length > 0){
                     let tab=''; 
-                    console.log (utilisateurs);
                     utilisateurs.forEach(utilisateur => {
                         tab += '<tr>';
                             tab += '<td>'+utilisateur.id_utilisateur+'</td>';                           
@@ -79,7 +78,6 @@ $('.insert').on('click','.modifier', function(e) {
 	update_id = $(this).attr('id');
 	ligne_a_modifier = $(this).closest('tr');
     infos_utilisateur = 'action=get_utilisateur&id_utilisateur='+update_id;
-    console.log(infos_utilisateur);
     $.post('../Controller/controller_gestion_utilisateur.php', // URL du dossier où s'effectue le traitement
             infos_utilisateur,  // Valeurs à 'envoyer' contenues dans la variable params
             function (infos) {  
