@@ -505,9 +505,9 @@
 		updateScore(currentScore + 10);
 
 		// flash color
-		bumper.render.fillStyle = COLOR.BUMPER_LIT;
+		bumper.render.sprite.texture = '../img/ball.png';
 		setTimeout(function() {
-			bumper.render.fillStyle = COLOR.BUMPER;
+			bumper.render.sprite.texture ='../img/bumper.png';
 		}, 100);
 	}
 
