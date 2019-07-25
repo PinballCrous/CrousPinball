@@ -218,9 +218,7 @@
 			angle: -1.57,
 			chamfer: {},
 			render: {
-				sprite:{
-					texture: '../img/pinballflipper.png'
-				}
+				fillStyle: COLOR.PADDLE
 			}
 		});
 		paddleRight.brick = Matter.Bodies.rectangle(278, 672, 40, 80, {
