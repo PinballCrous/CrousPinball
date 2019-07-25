@@ -19,7 +19,7 @@ if(isset($_POST['formconnexion'])) {
    //lecture dans la bdd (table correspondant à la catégorie) du mdp qui correspond au mail entrez dans le formulaire
    if(!empty($mailconnect)&&!empty($mdpconnect)){  
 
-      $req = $bdd->query('SELECT * FROM utilisateur join highscore on id_utilisateur = highscore.id_highscore WHERE utilisateur.mail = "'.$mailconnect.'"')->fetch(PDO::FETCH_ASSOC);
+      $req = $bdd->query('SELECT * FROM utilisateur WHERE utilisateur.mail = "'.$mailconnect.'"')->fetch(PDO::FETCH_ASSOC);
       if(password_verify($mdpconnect,$req['mdp'])){
          //initialisation session
          session_unset();

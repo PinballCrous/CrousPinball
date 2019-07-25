@@ -100,6 +100,6 @@ require_once('../templates/includes/css.php');
 
 <?php
     //ajout du fichier javascript permetant l'ouverture de la modal ainsi que la modification des information utilisateur en ajax
-	$js = ['gestion_utilisateur'];
+	$_SESSION['gestion_utilisateur'] = "gestion_utilisateur";
     require_once('../templates/includes/js.php')
 ?>

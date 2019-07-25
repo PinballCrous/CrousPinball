@@ -21,6 +21,12 @@ session_start();
                         echo '<a href="../formulaire/gestion_utilisateur.php" ><button type="button" class="btn text-white danger-color-dark">Gestion Utilisateur</button></a>';
                     }
                     ?>
+                    <?php 
+                    if(isset($_SESSION['role']) && !empty($_SESSION['role'])){
+                        if($_SESSION['role'] == "user")
+                        echo '<a href="../formulaire/profil.php" ><button type="button" class="btn text-white danger-color-dark">Profil</button></a>';
+                    }
+                    ?>
                 <?php 
                     if(isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])){
                         echo '<a href="../formulaire/deconnexion.php" ><button type="button" class="btn text-white danger-color-dark">deconnexion</button></a>';
