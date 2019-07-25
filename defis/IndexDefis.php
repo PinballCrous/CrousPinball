@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <?php include '../templates/includes/css.php'; ?>
     <link rel="stylesheet" href="cssdefis/styledefis.css">
+    <link rel="shortcut icon" href="#" />
     <title>Menu defis</title>
 </head>
 <body>

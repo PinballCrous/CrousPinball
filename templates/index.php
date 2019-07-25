@@ -7,6 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <?php include 'includes/css.php'; ?>
+    <link rel="shortcut icon" href="#" />
     <title>Document</title>
 </head>
 <body>
