@@ -619,7 +619,9 @@
 			isStatic: true, 
 			chamfer: { radius: border }, 
 			render: { 
-				fillStyle: color 
+				sprite: {
+					texture: '../img/bottle2.png'
+				} 
 			} 
 		}); 
 	} 
@@ -631,7 +633,9 @@
 			isStatic: true, 
 			chamfer: { radius: border }, 
 			render: { 
-				fillStyle: color 
+				sprite: {
+					texture: '../img/bottle1.png'
+				}
 			} 
 		}); 
 	} 
