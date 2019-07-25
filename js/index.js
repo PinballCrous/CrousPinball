@@ -284,7 +284,7 @@
 			},
 			render: {
 				sprite: {
-					texture: '../img/ball.png'
+					texture: '../img/ball1.png'
 				}
 			},
 			isStatic: true
