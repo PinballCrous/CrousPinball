@@ -81,7 +81,6 @@ $('.insert').on('click','.modifier', function(e) {
     $.post('../Controller/controller_gestion_utilisateur.php', // URL du dossier où s'effectue le traitement
             infos_utilisateur,  // Valeurs à 'envoyer' contenues dans la variable params
             function (infos) {  
-                console.log(infos);
             	$('.modal-title').html('Modification du utilisateur n° '+update_id);
 				$('#nom_update').val(infos.nom);	
 				$('#prenom_update').val(infos.prenom);
@@ -98,7 +97,6 @@ $("#btnSaveIt").on('click', function (e) {
 	let update_prenom = $('#prenom_update').val();
     let update_mail = $('#mail_update').val();
     let update_pseudo = $('#pseudo_update').val();
-    let update_role = $('#role_update').val();
 	let params='action=modification_utilisateur&'+$('#utilisateur_update').serialize()+'&id_utilisateur='+update_id;
     $.post('../Controller/controller_gestion_utilisateur.php', // URL du dossier où s'effectue le traitement
             params,  // Valeurs à 'envoyer' contenues dans la variable params
@@ -111,13 +109,12 @@ $("#btnSaveIt").on('click', function (e) {
                         ligne += '<td>'+update_prenom+'</td>';
                         ligne += '<td>'+update_mail+'</td>';
                         ligne += '<td>'+update_pseudo+'</td>';
-                        ligne += '<td>'+update_role+'</td>';
                         ligne += '<td><i id='+update_id+' class="modifier fas fa-pen blue-text"></i></td>';   
                         ligne += '<td><i id='+update_id+' class="effacer fas fa-times blue-text"></i></td>';                                
      				ligne += '</tr>';
                     ligne_a_modifier.replaceWith(ligne);				
             	}
-				$('#modalLoginForm').modal('hide');
+				$('#modaForm').modal('hide');
                 $('#utilisateur_update')[0].reset();  // reset du formulaire pour effacer les champs juste pour être propre !!s                
 				update_id=''; // on reset les variables de sauvegarde toujours pour être propre !!
 				ligne_a_modifier = '';

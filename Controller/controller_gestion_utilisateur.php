@@ -42,6 +42,6 @@ if(	isset($_POST['action']) && $_POST['action']=='modification_utilisateur'
 	$utilisateur = new Utilisateur( array( 'id_utilisateur' => $_POST['id_utilisateur'], 'nom' => $_POST['nom'], 'prenom' => $_POST['prenom'], 
 	'mail' => $_POST['mail'],'pseudo' => $_POST['pseudo']));
 	// echo json_encode( $_POST );
-	echo json_encode( $managerutilisateur->updateutilisateur($utilisateur) );
+	echo json_encode( $managerutilisateur->updateUtilisateur($utilisateur) );
 	
 }

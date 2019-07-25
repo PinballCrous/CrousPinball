@@ -30,20 +30,17 @@ class UtilisateurManager{
         return ($add_utilisateur->rowCount());
    } 
 
-  public function updateUtilisateur(Utilisateur $utilisateur) {
-  // Prépare une requête de type UPDATE.
-      $update_utilisateur = $this->bdd->prepare('UPDATE utilisateur SET pseudo = :pseudo, nom = :nom, prenom = : prenom, mail = :mail, mdp = :mdp, role = :role, crous = :crous WHERE id_utilisateur='.$utilisateur->getId_utilisateur());    
-      $update_utilisateur->bindValue(':pseudo', $utilisateur->getPseudo(), PDO::PARAM_STR);
-      $update_utilisateur->bindValue(':nom', $utilisateur->getNom(), PDO::PARAM_STR);
-      $update_utilisateur->bindValue(':prenom', $utilisateur->getPrenom(), PDO::PARAM_STR);
-      $update_utilisateur->bindValue(':mail', $utilisateur->getMail(), PDO::PARAM_STR);
-      $update_utilisateur->bindValue(':mdp', $utilisateur->getMdp(), PDO::PARAM_STR);  
-      $update_utilisateur->bindValue(':crous', $utilisateur->getCrous(), PDO::PARAM_STR);
-      $update_utilisateur->bindValue(':role', $utilisateur->getRole(), PDO::PARAM_STR); 
-      $update_utilisateur->execute();
-      $update_utilisateur->closeCursor();
-      return ($update_utilisateur->rowCount());
-  } 
+   public function updateutilisateur(utilisateur $utilisateur) {
+    // Préparation de la requête update. Assignation des valeurs. Exécution de la requête.
+    $update_utilisateur = $this->bdd->prepare('UPDATE utilisateur SET nom = :nom, prenom = :prenom, mail = :mail, pseudo = :pseudo WHERE id_utilisateur ='.$utilisateur->getId_utilisateur());  
+    $update_utilisateur->bindValue(':nom', $utilisateur->getNom(), PDO::PARAM_STR);    
+    $update_utilisateur->bindValue(':prenom', $utilisateur->getPrenom(), PDO::PARAM_STR);
+    $update_utilisateur->bindValue(':mail', $utilisateur->getMail(), PDO::PARAM_STR);
+    $update_utilisateur->bindValue(':pseudo', $utilisateur->getPseudo(), PDO::PARAM_STR);
+    $update_utilisateur->execute();
+    $update_utilisateur->closeCursor();
+    return ($update_utilisateur->rowCount());
+  }
 
   public function delete(Utilisateur $utilisateur) {
   // Exécute une requête de type DELETE
@@ -53,9 +50,9 @@ class UtilisateurManager{
   }      
 
   public function getUtilisateurbyId($id) {
-    $donnees = $this->bdd->query('SELECT * FROM utilisateur WHERE id_utilisateur ='.$id)->fetch(PDO::FETCH_ASSOC);
-    return new Utilisateur($donnees);
-    // return $donnees;
+    $donnees = $this->bdd->query('SELECT id_utilisateur, nom, prenom, mail, pseudo, role, crous FROM utilisateur WHERE id_utilisateur ='.$id)->fetch(PDO::FETCH_ASSOC);
+    // return new Utilisateur($donnees);
+    return $donnees;
   }   
 
   public function getListUtilisateur() {
