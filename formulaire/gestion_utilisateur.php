@@ -81,7 +81,7 @@ require_once('../templates/includes/css.php');
 						<input class="form-control mb-4" type="text" name="mail" id="mail_update">
 						
 						<label for="pseudo" class="font-weight-bold">Pseudo</label>
-						<input class="form-control mb-4" type="text" name="pseudo" id="pseudo_update">
+                        <input class="form-control mb-4" type="text" name="pseudo" id="pseudo_update">
 
                     </form>
                 </div>

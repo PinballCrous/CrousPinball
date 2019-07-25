@@ -95,10 +95,6 @@ session_start();
 
 
 
-    <?php
-    //fichier de services il est utilisé pour l'ajax dans ce cas-ci (pour l'emsemble des modification possible dans l'interface administrateur)
-
-     include '../templates/includes/js.php'; ?>
 </body>
 
 </html>

@@ -100,6 +100,7 @@ $("#btnSaveIt").on('click', function (e) {
 	let update_prenom = $('#prenom_update').val();
     let update_mail = $('#mail_update').val();
     let update_pseudo = $('#pseudo_update').val();
+    let update_role = $('#role_update').val();
 	let params='action=modification_utilisateur&'+$('#utilisateur_update').serialize()+'&id_utilisateur='+update_id;
     $.post('../Controller/controller_gestion_utilisateur.php', // URL du dossier où s'effectue le traitement
             params,  // Valeurs à 'envoyer' contenues dans la variable params
@@ -112,6 +113,7 @@ $("#btnSaveIt").on('click', function (e) {
                         ligne += '<td>'+update_prenom+'</td>';
                         ligne += '<td>'+update_mail+'</td>';
                         ligne += '<td>'+update_pseudo+'</td>';
+                        ligne += '<td>'+update_role+'</td>';
                         ligne += '<td><i id='+update_id+' class="modifier fas fa-pen blue-text"></i></td>';   
                         ligne += '<td><i id='+update_id+' class="effacer fas fa-times blue-text"></i></td>';                                
      				ligne += '</tr>';
