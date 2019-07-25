@@ -66,7 +66,7 @@ class UtilisateurManager{
     //   $utilisateur[] = new Utilisateur($donnees);
     // }
     // return $utilisateur;
-    return $utilisateur = $this->bdd->query('SELECT * FROM utilisateur ORDER BY utilisateur.id_utilisateur ASC')->fetchAll(PDO::FETCH_ASSOC);
+    return $utilisateur = $this->bdd->query('SELECT id_utilisateur, nom, prenom, pseudo, role, mail FROM utilisateur  ORDER BY utilisateur.id_utilisateur ASC ')->fetchAll(PDO::FETCH_ASSOC);
   }
 
     public function setBDD($bdd){
