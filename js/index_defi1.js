@@ -577,7 +577,9 @@
 			isStatic: true, 
 			chamfer: { radius: border }, 
 			render: { 
-				fillStyle: color 
+				sprite: {
+					texture: '../img/frite1.png'
+				} 
 			} 
 		}); 
 	} 
