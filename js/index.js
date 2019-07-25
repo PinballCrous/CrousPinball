@@ -274,6 +274,28 @@
 		updateLevel(1);
 	}
 
+	function createnewPinball() {
+
+		// x/y are set to when pinball is launched
+		pinball = Matter.Bodies.circle(465, 765, 14, {
+			label: 'pinball',
+			collisionFilter: {
+				group: stopperGroup
+			},
+			render: {
+				sprite: {
+					texture: '../img/ball.png'
+				}
+			},
+			isStatic: true
+				
+			
+		});
+		Matter.World.add(world, pinball);
+		levelCurrent = 5;
+		updateLevel(5);
+	}
+
 
 	function createEvents() {
 		// events for when the pinball hits stuff
@@ -464,6 +486,7 @@
 		Matter.Body.setAngularVelocity(pinball, 0);
 
 	}
+	
  
 	function resetPinball() {
 		isReset = true;
@@ -489,8 +512,6 @@
 		if (currentScore%500 == 0 && currentScore != 0) {
 			levelCurrent++;
 			updateLevel(levelCurrent);
-			createPinball();
-			launchPinball();
 		}
 		highScore = Math.max(currentScore, highScore);
 		$highScore.text(highScore);
@@ -507,7 +528,7 @@
 		if (levelCurrent=="10") { 
 			
 			//alert("Saviez vous que grâce aux restos U, les étudiants issus de tous les milieux ont la possibilité de prendre à l’extérieur de chez eux un repas par jour pour 3,25 € ? C’est une véritable mission de service public, une aide matérielle financée par l’Etat à travers le Cnous et les Crous.");
-		 
+			createnewPinball();
 		
 		}
 	}
