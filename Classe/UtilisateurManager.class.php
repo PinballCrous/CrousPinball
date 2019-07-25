@@ -11,14 +11,14 @@ class UtilisateurManager{
 
     public function add(Utilisateur $utilisateur) {
     // Préparation de la requête d'insertion. Assignation des valeurs. Exécution de la requête.
-        $add_utilisateur = $this->bdd->prepare('INSERT INTO utilisateur(pseudo, prenom, nom, mail, mdp, role, crous ) VALUES(:pseudo, :prenom, :nom, :mail, :mdp, :role, :crous);');
+        $add_utilisateur = $this->bdd->prepare('INSERT INTO utilisateur(pseudo, prenom, nom, mail, mdp, role, Crous ) VALUES(:pseudo, :prenom, :nom, :mail, :mdp, :role, :crous);');
         $add_utilisateur->bindValue(':pseudo', $utilisateur->getPseudo(), PDO::PARAM_STR);    
 	      $add_utilisateur->bindValue(':prenom', $utilisateur->getPrenom(), PDO::PARAM_STR);
         $add_utilisateur->bindValue(':nom', $utilisateur->getNom(), PDO::PARAM_STR);  
         $add_utilisateur->bindValue(':mail', $utilisateur->getMail(), PDO::PARAM_STR);
         $add_utilisateur->bindValue(':mdp', $utilisateur->getMdp(), PDO::PARAM_STR); 
         $add_utilisateur->bindValue(':role', $utilisateur->getRole(), PDO::PARAM_STR);
-        $add_utilisateur->bindValue(':crous', $utilisateur->getCrous(), PDO::PARAM-STR);
+        $add_utilisateur->bindValue(':crous', $utilisateur->getCrous(), PDO::PARAM_STR);
         echo "<br>".$utilisateur->getPseudo();
         echo "<br>".$utilisateur->getNom();
         echo "<br>".$utilisateur->getPrenom();
