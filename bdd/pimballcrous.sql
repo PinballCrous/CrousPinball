@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  mar. 23 juil. 2019 à 09:02
+-- Généré le :  jeu. 25 juil. 2019 à 14:18
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.11
 
@@ -34,6 +34,13 @@ CREATE TABLE `highscore` (
   `score` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Déchargement des données de la table `highscore`
+--
+
+INSERT INTO `highscore` (`id_highscore`, `date`, `score`) VALUES
+(1, '2019-07-01', 5000);
+
 -- --------------------------------------------------------
 
 --
@@ -43,8 +50,39 @@ CREATE TABLE `highscore` (
 CREATE TABLE `info` (
   `id_info` int(11) NOT NULL,
   `titre` varchar(255) NOT NULL,
-  `contenu` text NOT NULL
+  `contenu` text NOT NULL,
+  `theme` varchar(255) NOT NULL,
+  `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `info`
+--
+
+INSERT INTO `info` (`id_info`, `titre`, `contenu`, `theme`, `date`) VALUES
+(1, 'C\'est quoi un DSE ?', 'Le DSE est le Dossier Social Etudiant', 'Bourse', '2019-06-20'),
+(2, 'Comment créer un DSE ?', 'Pour faire une demande de bourse et/ou logement rendez-vous sur \"https://www.messerrvices.etudiant.gouv.fr/\" et cliquez sur la rubrique DSE', 'Bourse', '2019-06-20'),
+(3, 'C\'est quand les création du DSE ?', 'La constitution du Dossier Social Etudiant se fait entre LE 15 JANVIER ET LE 15 MAI', 'Bourse', '2019-06-20'),
+(4, 'Assistance sociale', 'Une assistance social est à la disposition de tous les étudiants qui en ont besoin (sur rendez-vous)  ', 'service social', '2019-06-20'),
+(5, 'Assistance sociale \"Son rôle\"', 'L\'assistance social proposé au étudiants se charge des les accueillir ainsi que de les accompagner sur des problèmes d\'ordre matériel, personnel, de santé qu\'ils peuvent rencontrer au cour de leurs études', 'service social', '2019-06-20'),
+(6, 'Aides spécifiques', 'Les aides spécifique peuvent être de 2 natures soit une ALLOCATION ANNUELLE soit UNE AIDE PONCTUELLE\r\n(Toutes les informations sur leurs attributions sur le site de votre Crous)', 'service social', '2019-06-20'),
+(7, 'Aides spécifiques \"DÉPANNAGE FINANCIER EXCEPTIONNEL\"', 'En effet une possibilité d\'aide financière est proposé aux étudiants grâce aux aides spécifiques', 'service social', '2019-06-20'),
+(8, 'Assistance sociale \"Liaison\"', 'L\'assistance social peut faire la liaison ou indiquer aux étudiants des services SOCIAUX ou SPÉCIALISE (médicaux, juridiques, universitaires) susceptible de compléter sont action', 'service social', '2019-06-20'),
+(9, 'Assistance sociale \"Le handicap\"', 'L\'assistance social accueille les étudiants. Il a pour vocation de leur offrir un lieu dans lequel ils pourront trouver : renseignements, une aide pour l\'organisation ainsi que tous ce qui pourrait participer au bon déroulement de leurs études', 'service social', '2019-06-20'),
+(10, 'Logement et DSE', 'Le DSE (Dossier Social Étudiant) est obligatoire à toute demande de logement ou de bourse', 'logement', '2019-06-20'),
+(11, 'Logement, quand faire la demande ?', 'Chaque années faite votre demande dès l\'ouverture des DSE soit LE 15 JANVIER', 'logement', '2019-06-20'),
+(12, 'Logement, à quand une réponse ?', 'Après votre demande de logement vous recevrez une réponce PAR MAIL VERS LE 25 JUIN', 'logement', '2019-06-20'),
+(13, 'Dossier Social Étudiant unique ?', 'Chaque étudiant constitue un UNIQUE dossir même si il est candidat à l\'entrée dans plusieurs établissements ou si il sollicite plusieurs aides, et ce quelle que soit l\'académie', 'logement', '2019-06-20'),
+(14, 'Combien de VŒUX de logement possibles ?', 'Chaque étudiant peuvent saisir jusqu’à 6 VŒUX MAXIMUM (2 VŒUX PAR SECTEURS GÉOGRAPHIQUES) et la possibilité de les modifier jusqu\'à la MI JUIN', 'logement', '2019-06-20'),
+(15, 'Cité\'U Kezaco ?', 'Cité\'U vous propose de payer votre loyer en ligne et de télécharger votre ATTESTATION DE RÉSIDENT (nécessaire pour votre demande de d\'aide au logement à la CAF)', 'logement', '2019-06-20'),
+(16, 'Lokaviz Kezaco ?', 'Lokaviz T\'aides à trouver ton logement chez un particulier et ce GRATUITEMENT', 'logement', '2019-06-20'),
+(17, 'Les Restaurants Universitaires ou RU', 'Il y a 24 Restaurant Universitaire au sein du Crous de Bourgogne Franche-Comté', 'restauration', '2019-06-20'),
+(18, 'Les Repas du RU', 'Grâce aux Restaurants Universitaire il est possible de manger un repas par jour pour 3,25€', 'restauration', '2019-06-20'),
+(19, 'IZLY Kézaco ?', 'IZLY , le paiement sans contact, avec votre carte Étudiant(pass\'UBFC) ou l\'application mobile. En toute sérénité !!\r\n(Plus d\'informations sur les site de votre Crous)', 'restauration', '2019-06-20'),
+(20, 'CONCOURS et TREMPLINS', 'Des Concours ainsi que des tremplins professionnels sont organisés durant toute l\'année Universitaire', 'vie étudiante-culture', '2019-06-20'),
+(21, 'Le dispositif CULTURE ACTIONS', 'Programme qui soutient et viens en aide aux étudiants pour réaliser leurs projets', 'vie étudiante-culture', '2019-06-20'),
+(22, 'Cité Internationale du Jeu', 'Lieux où les étudiants peuvent passer des moments de détente autour du domaine vidéo-ludique ou ludique et puissent ainsi rencontrer et s\'amuser avec d\'autres étudiants (toutes les informations sur les lieux et horaires sur le site de votre Crous)', 'vie étudiante-culture', '2019-06-20'),
+(23, 'Le Cube', 'Le Club Universitaire Bourgogne D’Échecs, vous propose des animations autour du célèbre jeu', 'vie étudiante-culture', '2019-06-20');
 
 -- --------------------------------------------------------
 
@@ -61,16 +99,17 @@ CREATE TABLE `utilisateur` (
   `mdp` varchar(255) NOT NULL,
   `role` enum('user','admin','superadmin') NOT NULL,
   `Crous` varchar(50) DEFAULT NULL,
-  `id_highscore` int(11) DEFAULT NULL
+  `id_highscore_fk` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`id_utilisateur`, `pseudo`, `nom`, `prenom`, `mail`, `mdp`, `role`, `Crous`, `id_highscore`) VALUES
-(1, 'God', 'Dieu', 'Webmasteur', 'dieu@modo.test', '$2y$10$Xb3kLdjqFrw2pcoxAhUDo.y8imBAjnK8paRwQugt6xsHw5QzufyHe', 'superadmin', NULL, NULL),
-(2, 'damdamtherat', 'masserini', 'adam', 'dahu@moi.fr', '$2y$10$xTY2zgaeIkaHGePJ4Ec2DOK7jjUyuvbwoAo/5DiIE/9E8Fiv5q2G2', 'user', NULL, NULL);
+INSERT INTO `utilisateur` (`id_utilisateur`, `pseudo`, `nom`, `prenom`, `mail`, `mdp`, `role`, `Crous`, `id_highscore_fk`) VALUES
+(1, 'God', 'Dieu', 'Webmasteur', 'dieu@modo.test', '$2y$10$Xb3kLdjqFrw2pcoxAhUDo.y8imBAjnK8paRwQugt6xsHw5QzufyHe', 'superadmin', 'Dijon', 1),
+(2, 'damdamtherat', 'masserini', 'adam', 'dahu@moi.test', '$2y$10$Xb3kLdjqFrw2pcoxAhUDo.y8imBAjnK8paRwQugt6xsHw5QzufyHe', 'user', 'Dijon', 1),
+(3, 'nu', 'te', 'lla', 'nut@ella.fr', '$2y$10$ywbww.buYYXO5pN87U2Nf.u1J/Quq.voGaXhMJGYHDzpTR.F7QDNa', 'user', 'Dijon', NULL);
 
 --
 -- Index pour les tables déchargées
@@ -93,7 +132,7 @@ ALTER TABLE `info`
 --
 ALTER TABLE `utilisateur`
   ADD PRIMARY KEY (`id_utilisateur`),
-  ADD KEY `id_highscore` (`id_highscore`);
+  ADD KEY `id_highscore` (`id_highscore_fk`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
@@ -103,19 +142,19 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `highscore`
 --
 ALTER TABLE `highscore`
-  MODIFY `id_highscore` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_highscore` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `info`
 --
 ALTER TABLE `info`
-  MODIFY `id_info` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_info` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Contraintes pour les tables déchargées
@@ -125,7 +164,7 @@ ALTER TABLE `utilisateur`
 -- Contraintes pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  ADD CONSTRAINT `utilisateur_ibfk_1` FOREIGN KEY (`id_highscore`) REFERENCES `highscore` (`id_highscore`);
+  ADD CONSTRAINT `utilisateur_ibfk_1` FOREIGN KEY (`id_highscore_fk`) REFERENCES `highscore` (`id_highscore`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
