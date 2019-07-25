@@ -35,7 +35,6 @@ require_once('../templates/includes/css.php');
 						<th class="font-weight-bold">Mail</th>
                         <th class="font-weight-bold">Pseudo</th>
                         <th class="font-weight-bold">Rôle</th>
-                        <th class="font-weight-bold">Highscore</th>
 						<th class="font-weight-bold">Modification</th>
 						<th class="font-weight-bold">Suppression</th>
 					</tr>
