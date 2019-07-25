@@ -477,9 +477,9 @@
 		updateScore(currentScore + 10);
 
 		// flash color
-		bumper.render.fillStyle = COLOR.BUMPER_LIT;
+		bumper.render.sprite.texture = '../img/donut1.png';
 		setTimeout(function() {
-			bumper.render.fillStyle = COLOR.BUMPER;
+			bumper.render.sprite.texture = '../img/donut.png';
 		}, 100);
 	}
 
