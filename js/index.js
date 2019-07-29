@@ -50,8 +50,6 @@
 		createPaddles();
 		createPinball();
 		createEvents();
-		createsecondEvents();
-
 	}
 
 	function init() {
@@ -278,8 +276,8 @@
 	function createnewPinball() {
 
 		// x/y are set to when pinball is launched
-		pinball1 = Matter.Bodies.circle(465, 765, 14, {
-			label: 'pinball1',
+		pinballe = Matter.Bodies.circle(465, 765, 14, {
+			label: 'pinballe',
 			collisionFilter: {
 				group: stopperGroup
 			},
@@ -292,7 +290,7 @@
 				
 			
 		});
-		Matter.World.add(world, pinball1);
+		Matter.World.add(world, pinballe);
 	}
 
 
@@ -489,10 +487,10 @@
 
 	function launchnewPinball() {
 		isDelete = false;
-		Matter.Body.setStatic(pinball1, false);
-		Matter.Body.setPosition(pinball1, { x: 465, y: 765 });
-		Matter.Body.setVelocity(pinball1, { x: 0, y: -25 + rand(-2, 2) });
-		Matter.Body.setAngularVelocity(pinball1, 0);
+		Matter.Body.setStatic(pinballe, false);
+		Matter.Body.setPosition(pinballe, { x: 465, y: 765 });
+		Matter.Body.setVelocity(pinballe, { x: 0, y: -25 + rand(-2, 2) });
+		Matter.Body.setAngularVelocity(pinballe, 0);
 
 	}
  
