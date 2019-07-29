@@ -319,6 +319,10 @@ canvas {
 		right: 220px;
 	}
 
+	.lancer{
+		right: 40px;;
+	}
+
 	#c{
 		top: 180px;
 		left: 155px;
@@ -342,5 +346,10 @@ canvas {
 	#s{
 		top: 180px;
 		left: 410px;
+	}
+
+	.prebtn{
+		right: 465px;
+		bottom: 160px;
 	}
 }
