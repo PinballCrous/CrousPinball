@@ -9,7 +9,7 @@ session_start();
     <?php include 'includes/css.php'; ?>
     <link rel="shortcut icon" href="#" />
     <link rel="manifest" href="../static/manifest.json">
-    <title>Document</title>
+    <title>PinballCrous</title>
 </head>
 <body>
     <main>
