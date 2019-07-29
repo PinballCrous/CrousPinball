@@ -119,7 +119,7 @@
 
 			// bottom bumpers (left, right)
 		
-			bumper(230, 340),
+			// bumper(230, 340),
 
 			// shooter lane wall
 			// mur gauche ou la balle est lancé 
