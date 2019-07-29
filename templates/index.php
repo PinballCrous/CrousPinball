@@ -8,6 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <?php include 'includes/css.php'; ?>
     <link rel="shortcut icon" href="#" />
+    <link rel="manifest" href="../static/manifest.json">
     <title>Document</title>
 </head>
 <body>
