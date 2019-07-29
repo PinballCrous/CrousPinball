@@ -288,21 +288,22 @@ canvas {
 
 
 /* responsive scaling, because pinball tables are tall */
-@media (min-width: 0px) {
+@media (min-height: 0px) {
 	.container { -webkit-transform: scale(0.25); transform: scale(0.25); }
 }
-@media (min-width: 400px) {
+@media (min-height: 400px) {
 	.container { -webkit-transform: scale(0.5); transform: scale(0.5); }
 }
-@media (min-width: 600px) {
+@media (min-height: 600px) {
 	.container { -webkit-transform: scale(0.75); transform: scale(0.75); }
+	
 }
 @media (min-height: 1000px) {
 	.container { -webkit-transform: scale(1); transform: scale(1); }
 	body{
 		transform: rotate(90deg);
 		margin: 0;
-		padding: 0:
+		padding: 0;
 	}
 	canvas{
 		margin: 0;
