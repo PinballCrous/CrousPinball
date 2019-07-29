@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- <?php include '../templates/includes/css.php' ?> -->
-    <link rel="stylesheet" href="../css/style_defi_4.css">
+    <link rel="stylesheet" href="../css/style_defi_1.css">
     <link rel="shortcut icon" href="#" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
     <title>Pinball CROUS</title>
@@ -81,7 +81,7 @@
 
 
 
-                <script src="../js/index_defi4.js"></script>
+                <script src="../js/index_defi1.js"></script>
                 <!-- <audio id="blaster" src="musique/blaster.mp3"></audio>
                 <audio id="theme" loop="" autoplay="" src="musique/theme.mp3"></audio>
                 <audio id="PADDLE" src="musique/PADDLE.mp3"></audio>
