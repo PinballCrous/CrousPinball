@@ -10,20 +10,18 @@ $(document).ready(function(){
                 infos_profil, // Valeur à 'envoyer', ici pas de valeurs à envoyer uniquement une indication pour le traitement
                 function (profils) {
                     // console.log(profils); 
-                    if(profils.length > 0){
+                    // if(profils.length > 0){
                         let tab=''; 
-                        profils.forEach(profil => {
                             tab += '<tr>';                        
-                                tab += '<td>'+profil.nom+'</td>';
-                                tab += '<td>'+profil.prenom+'</td>';
-                                tab += '<td>'+profil.mail+'</td>';
-                                tab += '<td>'+profil.pseudo+'</td>';
-                                tab += '<td>'+profil.Crous+'</td>';
-                                tab += '<td><i id='+profil.id_utilisateur+' class="modifier fas fa-pen red-text"></i></td>';                                    
+                                tab += '<td>'+profils.nom+'</td>';
+                                tab += '<td>'+profils.prenom+'</td>';
+                                tab += '<td>'+profils.mail+'</td>';
+                                tab += '<td>'+profils.pseudo+'</td>';
+                                tab += '<td>'+profils.crous+'</td>';
+                                tab += '<td><i id='+profils.id_utilisateur+' class="modifier fas fa-pen red-text"></i></td>';                                    
                                 tab += '</tr>';
-                        });
                         $('.insert').append(tab);
-                    }
+                    // }
                 }, 'json'); // format attendu pour le retour
     }  // fin de la fonction afficheprofil
     
