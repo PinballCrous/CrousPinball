@@ -21,21 +21,21 @@
                         <h4 class="card-header danger-color-dark border border-0 white-text text-center"><strong>Campus</strong></h4>
                         <img src="../img/campus.jpg" alt="campus" class="w-100">
                         <p>Ici les niveaux du campus</p>
-                        <a href="#"><button type="button" class="btn text-white danger-color-dark">Jouer</button></a>
+                        <a href="../lvl/lvl1.php"><button type="button" class="btn text-white danger-color-dark">Jouer</button></a>
                     </div>
 
                     <div class="col-lg-3 col-md-12 z-depth-4 p-0 m-3 pb-2">
                         <h4 class="card-header danger-color-dark border border-0 white-text text-center"><strong>Logement</strong></h4>
                         <img src="../img/logment.jpg" alt="logement" class="w-100">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <button type="button" class="btn text-white danger-color-dark">Jouer</button>
+                        <a href="../lvl/lvl2.php"><button type="button" class="btn text-white danger-color-dark">Jouer</button></a>
                     </div>
 
                     <div class="col-lg-3 col-md-12 z-depth-4 p-0 m-3 pb-2">
                         <h4 class="card-header danger-color-dark border border-0 white-text text-center"><strong>Aides</strong></h4>
                         <img src="../img/aide.jpg" alt="aide" class="w-100">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <button type="button" class="btn text-white danger-color-dark">Jouer</button>
+                        <a href="../lvl/lvl3.php"><button type="button" class="btn text-white danger-color-dark">Jouer</button></a>
                     </div>
 
                     <div class="col-lg-3 col-md-12 z-depth-4 p-0 m-3 pb-2">

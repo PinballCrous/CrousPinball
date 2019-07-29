@@ -508,9 +508,9 @@
 		updateScore(currentScore + 10);
 
 		// flash color
-		bumper.render.sprite.texture = '../img/donut1.png';
+		// bumper.render.sprite.texture = '../img/donut1.png';
 		setTimeout(function() {
-			bumper.render.sprite.texture = '../img/donut.png';
+			// bumper.render.sprite.texture = '../img/donut.png';
 		}, 100);
 	}
 
@@ -577,9 +577,10 @@
 			isStatic: true, 
 			chamfer: { radius: border }, 
 			render: { 
-				sprite: {
-					texture: '../img/frite1.png'
-				} 
+				// ici le fond
+				// sprite: {
+				// 	texture: '../img/frite1.png'
+				// } 
 			} 
 		}); 
 	} 
@@ -591,9 +592,9 @@
 				isStatic: true, 
 				chamfer: { radius: border }, 
 				render: { 
-					sprite:{ 
-						texture: '../img/brigitteultime.png' 
-					} 
+					// sprite:{ 
+					// 	texture: '../img/brigitteultime.png' 
+					// } 
 				} 
 			}); 
 		} 
@@ -605,9 +606,9 @@
 				isStatic: true, 
 				chamfer: { radius: border }, 
 				render: { 
-					sprite:{ 
-						texture: '../img/brigitteultime2.png' 
-					} 
+					// sprite:{ 
+					// 	texture: '../img/brigitteultime2.png' 
+					// } 
 				} 
 			}); 
 		} 
@@ -619,9 +620,9 @@
 			isStatic: true, 
 			chamfer: { radius: border }, 
 			render: { 
-				sprite: {
-					texture: '../img/bottle2.png'
-				} 
+				// sprite: {
+				// 	texture: '../img/bottle2.png'
+				// } 
 			} 
 		}); 
 	} 
@@ -633,9 +634,9 @@
 			isStatic: true, 
 			chamfer: { radius: border }, 
 			render: { 
-				sprite: {
-					texture: '../img/bottle1.png'
-				}
+				// sprite: {
+				// 	texture: '../img/bottle1.png'
+				// }
 			} 
 		}); 
 	} 
@@ -648,9 +649,9 @@
 			isStatic: true, 
 			chamfer: { radius: border }, 
 			render: { 
-				sprite:{ 
-					texture: '../img/saucisse1.png' 
-				} 
+				// sprite:{ 
+				// 	texture: '../img/saucisse1.png' 
+				// } 
 			} 
 		}); 
 	} 
@@ -688,9 +689,9 @@
 			label: 'bumper',
 			isStatic: true,
 			render: {
-				sprite:{
-					texture: '../img/donut.png'
-				}
+				// sprite:{
+				// 	texture: '../img/donut.png'
+				// }
 			}
 		});
 
