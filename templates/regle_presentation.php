@@ -27,13 +27,13 @@ session_start();
                     <div class="col-6">
                     <h2 class="text-danger">Règles du jeu</h2>
                         <p>Les règles du jeu sont très simples :<p>
-                        <p> Envoyez la balle dans le plateau <strong> touchez les bumpers pour marquer les plus de point possible et essayez de garder la balle dans le plateeau le plus longtemps possible</p>
+                        <p> Envoyez la balle dans le plateau <strong> touchez les bumpers pour marquer les plus de point possible et essayez de garder la balle dans le plateau le plus longtemps possible</p>
                         <p>Si vous jouer sur mobile ou tablette (ou tout autre appareil tactile) il vous suffit d'appuyez sur <strong>Go!</strong> pour lancer une partie et d'appuyez sur <strong>Tap!</strong>pour bouger les paddles</p>
                         <p>Si vous jouer sur un ordinateur il vous suffit de presser la barre espace de votre clavier pour lancer la partie et de pressez les <strong>flèches droite et gauche</strong> pour bouger les paddles</p>
                         <div class="justify-content-center">
                             <h2 class="text-danger">Présentation du jeu</h2>
                             <p>Pourquoi un Pinball ?</p>
-                            <p>Nous avons remarquer que récuperer des informations dans un tout nouvel environnement peut s'averer parfois compliquer, c'est pourquoi nous avons decider de créer un jeu ludique comprotant l'essentiel des informations utile aux étudiant ddécidant de rentrer au Crous</p>
+                            <p>Nous avons remarqué que récuperer des informations dans un tout nouvel environnement peut s'averer parfois compliquer, c'est pourquoi nous avons decidé de créer un jeu ludique comportant l'essentiel des informations utiles aux étudiants désireux de s'informer des services du Crous</p>
                         </div> 
                     </div>
                 </div>
