@@ -42,7 +42,7 @@
                         <h4 class="card-header danger-color-dark border border-0 white-text text-center"><strong>Restauration</strong></h4>
                         <img src="../img/nourriture.jpg" alt="nourriture" class="w-100">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <a href="../lvl/lvl1.php"><button type="button" class="btn text-white danger-color-dark">Jouer</button></a>
+                        <a href="../lvl/lvl4.php"><button type="button" class="btn text-white danger-color-dark">Jouer</button></a>
 
                     </div>
             </div>
