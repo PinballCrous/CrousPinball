@@ -21,7 +21,7 @@
                         <h4 class="card-header danger-color-dark border border-0 white-text text-center"><strong>Campus</strong></h4>
                         <img src="../img/campus.jpg" alt="campus" class="w-100">
                         <p>Ici les niveaux du campus</p>
-                        <a href="../lvl/lvl1.php"><button type="button" class="btn text-white danger-color-dark">Jouer</button></a>
+                        <a href="#"><button type="button" class="btn text-white danger-color-dark">Jouer</button></a>
                     </div>
 
                     <div class="col-lg-3 col-md-12 z-depth-4 p-0 m-3 pb-2">
@@ -42,7 +42,8 @@
                         <h4 class="card-header danger-color-dark border border-0 white-text text-center"><strong>Restauration</strong></h4>
                         <img src="../img/nourriture.jpg" alt="nourriture" class="w-100">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <button type="button" class="btn text-white danger-color-dark">Jouer</button>
+                        <a href="../lvl/lvl1.php"><button type="button" class="btn text-white danger-color-dark">Jouer</button></a>
+
                     </div>
             </div>
         </article>
