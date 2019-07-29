@@ -29,11 +29,11 @@ require_once('../templates/includes/css.php');
 					<tr>
 						<input type="hidden" name="id_utilisateur" id="id_utilisateur" value="<?php echo $_SESSION['id_utilisateur']?>">
 
-						<th class="font-weight-bold">Nom<?php echo $_SESSION['id_utilisateur'];?></th>
+						<th class="font-weight-bold">Nom</th>
                         <th class="font-weight-bold">Prenom</th>
 						<th class="font-weight-bold">Mail</th>
                         <th class="font-weight-bold">Pseudo</th>
-                        <th class="font-weight-bold">Highscore</th>
+                        <th class="font-weight-bold">Crous</th>
 						<th class="font-weight-bold">Modification</th>
 					</tr>
 				</thead>

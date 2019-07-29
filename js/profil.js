@@ -8,7 +8,8 @@ $(document).ready(function(){
         infos_profil = 'action=get_profil&id_utilisateur='+id;
         $.post ('../Controller/controller_profil.php',  // URL du dossier où s'effectue le traitement
                 infos_profil, // Valeur à 'envoyer', ici pas de valeurs à envoyer uniquement une indication pour le traitement
-                function (profils) { 
+                function (profils) {
+                    // console.log(profils); 
                     if(profils.length > 0){
                         let tab=''; 
                         profils.forEach(profil => {
@@ -17,22 +18,22 @@ $(document).ready(function(){
                                 tab += '<td>'+profil.prenom+'</td>';
                                 tab += '<td>'+profil.mail+'</td>';
                                 tab += '<td>'+profil.pseudo+'</td>';
-                                tab += '<td>'+profil.score+'</td>';
+                                tab += '<td>'+profil.Crous+'</td>';
                                 tab += '<td><i id='+profil.id_utilisateur+' class="modifier fas fa-pen red-text"></i></td>';                                    
                                 tab += '</tr>';
                         });
                         $('.insert').append(tab);
                     }
                 }, 'json'); // format attendu pour le retour
-    }  // fin de la fonction afficheAbonne
+    }  // fin de la fonction afficheprofil
     
     afficheprofil();
     
     
     
-    // UPDATE D'UN ABONNE ****************************************************************************************************************
-    // ouverture de la modal avec les infos de l'abonné à modifier
-    var update_id = ''; // sauvegarde de l'id de l'abonné à modifier utilisé dans les deux fonctions Ajax qui suivent donc on le garde au chaud
+    // UPDATE D'UN PROFIL ****************************************************************************************************************
+    // ouverture de la modal avec les infos de l'utilisateur à modifier
+    var update_id = ''; // sauvegarde de l'id de l'utilisateur à modifier utilisé dans les deux fonctions Ajax qui suivent donc on le garde au chaud
     var ligne_a_modifier = '';
     
     $('.insert').on('click','.modifier', function(e) {
