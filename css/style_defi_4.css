@@ -288,15 +288,69 @@ canvas {
 
 
 /* responsive scaling, because pinball tables are tall */
+
 @media (min-height: 0px) {
-	.container { -webkit-transform: scale(0.25); transform: scale(0.25); }
+	.container { -webkit-transform: scale(1); transform: scale(1); }
 }
 @media (min-height: 400px) {
 	.container { -webkit-transform: scale(0.5); transform: scale(0.5); }
 }
 @media (min-height: 600px) {
-	.container { -webkit-transform: scale(0.75); transform: scale(0.75); }
+	.container { -webkit-transform: scale(0.6); transform: scale(0.6); }
+	
 }
-@media (min-height: 800px) {
-	.container { -webkit-transform: scale(1); transform: scale(1); }
+@media (min-height: 1000px) {
+	.container { 
+		-webkit-transform: scale(1); transform: scale(1); 
+	}
+
+	body{
+		transform: rotate(90deg);
+		margin: 0;
+	}
+
+	main{
+		padding: 0;
+	}
+
+	canvas{
+		margin: 0;
+		height: 100vh;
+	}
+	.right-trigger {
+		right: 220px;
+	}
+	.lancer{
+		right: 40px;;
+	}
+
+	#c{
+		top: 180px;
+		left: 155px;
+	}
+
+	#r{
+		top: 180px;
+		left: 220px;
+	}
+
+	#o{
+		top: 180px;
+		left: 280px;
+	}
+
+	#u{
+		top: 180px;
+		left: 340px;
+	}
+
+	#s{
+		top: 180px;
+		left: 410px;
+	}
+
+	.prebtn{
+		right: 465px;
+		bottom: 160px;
+	}
 }

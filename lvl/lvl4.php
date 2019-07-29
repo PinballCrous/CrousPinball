@@ -6,6 +6,7 @@
     <!-- <?php include '../templates/includes/css.php' ?> -->
     <link rel="stylesheet" href="../css/style_defi_4.css">
     <link rel="shortcut icon" href="#" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
     <title>Pinball CROUS</title>
 </head>
 
