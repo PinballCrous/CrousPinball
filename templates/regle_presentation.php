@@ -37,7 +37,8 @@ session_start();
                         </div> 
                     </div>
                 </div>
-            </div>         
+            </div> 
+            <p>Développeur : Ivane BAGASHVILI, Adam MASSERINI, Jason SIMONNEAU</p>        
         </div>
     </main>
 
